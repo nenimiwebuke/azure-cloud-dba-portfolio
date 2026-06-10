@@ -1,4 +1,10 @@
 terraform {
+ backend "azurerm" {
+  resource_group_name  = "rg-tfstate-cloud-dba"
+  storage_account_name = "stcloudbdatfstate6869"
+  container_name       = "tfstate"
+  key                  = "cloud-dba-portfolio.tfstate"
+}	
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
