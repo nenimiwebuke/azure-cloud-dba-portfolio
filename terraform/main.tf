@@ -59,3 +59,24 @@ resource "azurerm_subnet_network_security_group_association" "portfolio_subnet_n
   subnet_id                 = azurerm_subnet.portfolio_subnet.id
   network_security_group_id = azurerm_network_security_group.portfolio_nsg.id
 }
+
+resource "azurerm_public_ip" "portfolio_public_ip" {
+  name                = "pip-cloud-dba-dev"
+  location            = azurerm_resource_group.portfolio.location
+  resource_group_name = azurerm_resource_group.portfolio.name
+  allocation_method   = "Static"
+  sku                 = "Standard"
+}
+
+resource "azurerm_network_interface" "portfolio_nic" {
+  name                = "nic-cloud-dba-dev"
+  location            = azurerm_resource_group.portfolio.location
+  resource_group_name = azurerm_resource_group.portfolio.name
+
+  ip_configuration {
+    name                          = "internal"
+    subnet_id                     = azurerm_subnet.portfolio_subnet.id
+    private_ip_address_allocation = "Dynamic"
+    public_ip_address_id          = azurerm_public_ip.portfolio_public_ip.id
+  }
+}
