@@ -17,3 +17,11 @@ output "public_ip_name" {
 output "nic_private_ip" {
   value = azurerm_network_interface.portfolio_nic.private_ip_address
 }
+
+output "storage_account_name" {
+  value = azurerm_storage_account.portfolio_storage.name
+}
+
+output "blob_container_name" {
+  value = azurerm_storage_container.portfolio_blob.name
+}
