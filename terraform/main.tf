@@ -118,3 +118,11 @@ resource "azurerm_mssql_firewall_rule" "allow_my_ip" {
   start_ip_address = "172.56.222.194"
   end_ip_address   = "172.56.222.194"
 }
+
+resource "azurerm_log_analytics_workspace" "portfolio_law" {
+  name                = "law-cloud-dba-dev"
+  location            = azurerm_resource_group.portfolio.location
+  resource_group_name = azurerm_resource_group.portfolio.name
+  sku                 = "PerGB2018"
+  retention_in_days   = 30
+}

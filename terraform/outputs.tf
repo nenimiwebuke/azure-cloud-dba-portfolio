@@ -37,3 +37,7 @@ output "sql_database_name" {
 output "sql_server_fqdn" {
   value = azurerm_mssql_server.portfolio_sql_server.fully_qualified_domain_name
 }
+
+output "log_analytics_workspace_name" {
+  value = azurerm_log_analytics_workspace.portfolio_law.name
+}
