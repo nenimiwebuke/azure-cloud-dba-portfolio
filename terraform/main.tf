@@ -80,3 +80,18 @@ resource "azurerm_network_interface" "portfolio_nic" {
     public_ip_address_id          = azurerm_public_ip.portfolio_public_ip.id
   }
 }
+
+resource "azurerm_storage_account" "portfolio_storage" {
+  name                = "stclouddbaportfolio01"
+  resource_group_name = azurerm_resource_group.portfolio.name
+  location            = azurerm_resource_group.portfolio.location
+
+  account_tier             = "Standard"
+  account_replication_type = "LRS"
+}
+
+resource "azurerm_storage_container" "portfolio_blob" {
+  name                  = "portfolio-data"
+  storage_account_id    = azurerm_storage_account.portfolio_storage.id
+  container_access_type = "private"
+}
