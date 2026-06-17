@@ -95,3 +95,19 @@ resource "azurerm_storage_container" "portfolio_blob" {
   storage_account_id    = azurerm_storage_account.portfolio_storage.id
   container_access_type = "private"
 }
+
+resource "azurerm_mssql_server" "portfolio_sql_server" {
+  name                         = "sql-nenim-portfolio-cus-dev"
+  resource_group_name          = azurerm_resource_group.portfolio.name
+  location                     = "Central US"
+  version                      = "12.0"
+  administrator_login          = var.sql_admin_login
+  administrator_login_password = var.sql_admin_password
+}
+
+resource "azurerm_mssql_database" "portfolio_sql_db" {
+  name      = "CloudDBAPortfolioDB"
+  server_id = azurerm_mssql_server.portfolio_sql_server.id
+
+  sku_name = "Basic"
+}

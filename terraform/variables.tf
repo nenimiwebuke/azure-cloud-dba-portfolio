@@ -9,3 +9,13 @@ variable "resource_group_name" {
   type        = string
   default     = "rg-cloud-dba-portfolio-dev"
 }
+
+variable "sql_admin_login" {
+  default = "sqladminnenim"
+}
+
+variable "sql_admin_password" {
+  description = "SQL Admin Password"
+  type        = string
+  sensitive   = true
+}

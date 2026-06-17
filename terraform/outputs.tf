@@ -25,3 +25,15 @@ output "storage_account_name" {
 output "blob_container_name" {
   value = azurerm_storage_container.portfolio_blob.name
 }
+
+output "sql_server_name" {
+  value = azurerm_mssql_server.portfolio_sql_server.name
+}
+
+output "sql_database_name" {
+  value = azurerm_mssql_database.portfolio_sql_db.name
+}
+
+output "sql_server_fqdn" {
+  value = azurerm_mssql_server.portfolio_sql_server.fully_qualified_domain_name
+}
