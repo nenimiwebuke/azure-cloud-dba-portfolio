@@ -111,3 +111,10 @@ resource "azurerm_mssql_database" "portfolio_sql_db" {
 
   sku_name = "Basic"
 }
+
+resource "azurerm_mssql_firewall_rule" "allow_my_ip" {
+  name             = "Allow-My-Current-IP"
+  server_id        = azurerm_mssql_server.portfolio_sql_server.id
+  start_ip_address = "172.56.222.194"
+  end_ip_address   = "172.56.222.194"
+}
