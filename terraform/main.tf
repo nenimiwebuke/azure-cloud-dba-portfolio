@@ -140,3 +140,9 @@ resource "azurerm_key_vault" "portfolio_kv" {
   purge_protection_enabled   = false
   soft_delete_retention_days = 7
 }
+
+resource "azurerm_data_factory" "portfolio_adf" {
+  name                = "adf-nenim-cloud-dba-dev"
+  location            = azurerm_resource_group.portfolio.location
+  resource_group_name = azurerm_resource_group.portfolio.name
+}
