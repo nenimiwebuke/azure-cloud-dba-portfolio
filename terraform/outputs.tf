@@ -49,3 +49,19 @@ output "key_vault_name" {
 output "data_factory_name" {
   value = azurerm_data_factory.portfolio_adf.name
 }
+
+output "adls_storage_account_name" {
+  value = azurerm_storage_account.portfolio_adls.name
+}
+
+output "adls_bronze_container" {
+  value = azurerm_storage_container.bronze.name
+}
+
+output "adls_silver_container" {
+  value = azurerm_storage_container.silver.name
+}
+
+output "adls_gold_container" {
+  value = azurerm_storage_container.gold.name
+}
