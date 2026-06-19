@@ -65,3 +65,11 @@ output "adls_silver_container" {
 output "adls_gold_container" {
   value = azurerm_storage_container.gold.name
 }
+
+output "databricks_workspace_name" {
+  value = azurerm_databricks_workspace.portfolio_databricks.name
+}
+
+output "databricks_workspace_url" {
+  value = azurerm_databricks_workspace.portfolio_databricks.workspace_url
+}

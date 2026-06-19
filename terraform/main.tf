@@ -174,3 +174,10 @@ resource "azurerm_storage_container" "gold" {
   storage_account_id    = azurerm_storage_account.portfolio_adls.id
   container_access_type = "private"
 }
+
+resource "azurerm_databricks_workspace" "portfolio_databricks" {
+  name                = "dbw-nenim-cloud-dba-dev"
+  resource_group_name = azurerm_resource_group.portfolio.name
+  location            = azurerm_resource_group.portfolio.location
+  sku                 = "trial"
+}
