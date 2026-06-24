@@ -1,0 +1,11 @@
+OrderID,CustomerName,Product,Category,Quantity,UnitPrice,OrderDate,State
+1001,John Smith,Laptop,Electronics,1,1200,2026-06-01,NY
+1002,Mary Johnson,Mouse,Electronics,2,25,2026-06-01,CA
+1003,David Brown,Desk,Furniture,1,300,2026-06-02,TX
+1004,Sarah Davis,Chair,Furniture,2,150,2026-06-02,NY
+1005,Michael Wilson,Monitor,Electronics,1,400,2026-06-03,FL
+1006,Lisa Taylor,Laptop,Electronics,1,1200,2026-06-03,CA
+1007,James Miller,Desk,Furniture,1,300,2026-06-04,TX
+1008,Emma Garcia,Monitor,Electronics,2,400,2026-06-04,NY
+1009,Daniel Thomas,Chair,Furniture,1,150,2026-06-05,FL
+1010,Olivia White,Mouse,Electronics,4,25,2026-06-05,CA
