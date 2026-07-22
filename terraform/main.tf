@@ -32,62 +32,51 @@ moved {
   to   = module.resource_group.azurerm_resource_group.this
 }
 
-resource "azurerm_virtual_network" "portfolio_vnet" {
-  name                = "vnet-cloud-dba-dev"
-  address_space       = ["10.0.0.0/16"]
-  location            = module.resource_group.location
+module "networking" {
+  source = "./modules/networking"
+
   resource_group_name = module.resource_group.name
-}
-
-resource "azurerm_subnet" "portfolio_subnet" {
-  name                 = "subnet-cloud-dba-dev"
-  resource_group_name  = module.resource_group.name
-  virtual_network_name = azurerm_virtual_network.portfolio_vnet.name
-  address_prefixes     = ["10.0.1.0/24"]
-}
-
-resource "azurerm_network_security_group" "portfolio_nsg" {
-  name                = "nsg-cloud-dba-dev"
   location            = module.resource_group.location
-  resource_group_name = module.resource_group.name
 
-  security_rule {
-    name                       = "Deny-All-Inbound"
-    priority                   = 4096
-    direction                  = "Inbound"
-    access                     = "Deny"
-    protocol                   = "*"
-    source_port_range          = "*"
-    destination_port_range     = "*"
-    source_address_prefix      = "*"
-    destination_address_prefix = "*"
-  }
+  vnet_name               = "vnet-cloud-dba-dev"
+  vnet_address_space      = ["10.0.0.0/16"]
+  subnet_name             = "subnet-cloud-dba-dev"
+  subnet_address_prefixes = ["10.0.1.0/24"]
+  nsg_name                = "nsg-cloud-dba-dev"
+  public_ip_name          = "pip-cloud-dba-dev"
+  nic_name                = "nic-cloud-dba-dev"
+
+  tags = {}
 }
 
-resource "azurerm_subnet_network_security_group_association" "portfolio_subnet_nsg" {
-  subnet_id                 = azurerm_subnet.portfolio_subnet.id
-  network_security_group_id = azurerm_network_security_group.portfolio_nsg.id
+moved {
+  from = azurerm_virtual_network.portfolio_vnet
+  to   = module.networking.azurerm_virtual_network.this
 }
 
-resource "azurerm_public_ip" "portfolio_public_ip" {
-  name                = "pip-cloud-dba-dev"
-  location            = module.resource_group.location
-  resource_group_name = module.resource_group.name
-  allocation_method   = "Static"
-  sku                 = "Standard"
+moved {
+  from = azurerm_subnet.portfolio_subnet
+  to   = module.networking.azurerm_subnet.this
 }
 
-resource "azurerm_network_interface" "portfolio_nic" {
-  name                = "nic-cloud-dba-dev"
-  location            = module.resource_group.location
-  resource_group_name = module.resource_group.name
+moved {
+  from = azurerm_network_security_group.portfolio_nsg
+  to   = module.networking.azurerm_network_security_group.this
+}
 
-  ip_configuration {
-    name                          = "internal"
-    subnet_id                     = azurerm_subnet.portfolio_subnet.id
-    private_ip_address_allocation = "Dynamic"
-    public_ip_address_id          = azurerm_public_ip.portfolio_public_ip.id
-  }
+moved {
+  from = azurerm_subnet_network_security_group_association.portfolio_subnet_nsg
+  to   = module.networking.azurerm_subnet_network_security_group_association.this
+}
+
+moved {
+  from = azurerm_public_ip.portfolio_public_ip
+  to   = module.networking.azurerm_public_ip.this
+}
+
+moved {
+  from = azurerm_network_interface.portfolio_nic
+  to   = module.networking.azurerm_network_interface.this
 }
 
 resource "azurerm_storage_account" "portfolio_storage" {

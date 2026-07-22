@@ -3,19 +3,19 @@ output "resource_group_name" {
 }
 
 output "vnet_name" {
-  value = azurerm_virtual_network.portfolio_vnet.name
+  value = module.networking.virtual_network_name
 }
 
 output "subnet_name" {
-  value = azurerm_subnet.portfolio_subnet.name
+  value = module.networking.subnet_name
 }
 
 output "public_ip_name" {
-  value = azurerm_public_ip.portfolio_public_ip.name
+  value = module.networking.public_ip_name
 }
 
 output "nic_private_ip" {
-  value = azurerm_network_interface.portfolio_nic.private_ip_address
+  value = module.networking.network_interface_private_ip
 }
 
 output "storage_account_name" {
