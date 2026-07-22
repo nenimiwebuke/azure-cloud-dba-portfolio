@@ -18,29 +18,38 @@ provider "azurerm" {
   subscription_id = "4cef5174-3663-46bd-9870-d117cf748336"
 }
 
-resource "azurerm_resource_group" "portfolio" {
+module "resource_group" {
+  source = "./modules/resource-group"
+
   name     = "rg-cloud-dba-portfolio-dev"
   location = "East US"
+
+  tags = {}
+}
+
+moved {
+  from = azurerm_resource_group.portfolio
+  to   = module.resource_group.azurerm_resource_group.this
 }
 
 resource "azurerm_virtual_network" "portfolio_vnet" {
   name                = "vnet-cloud-dba-dev"
   address_space       = ["10.0.0.0/16"]
-  location            = azurerm_resource_group.portfolio.location
-  resource_group_name = azurerm_resource_group.portfolio.name
+  location            = module.resource_group.location
+  resource_group_name = module.resource_group.name
 }
 
 resource "azurerm_subnet" "portfolio_subnet" {
   name                 = "subnet-cloud-dba-dev"
-  resource_group_name  = azurerm_resource_group.portfolio.name
+  resource_group_name  = module.resource_group.name
   virtual_network_name = azurerm_virtual_network.portfolio_vnet.name
   address_prefixes     = ["10.0.1.0/24"]
 }
 
 resource "azurerm_network_security_group" "portfolio_nsg" {
   name                = "nsg-cloud-dba-dev"
-  location            = azurerm_resource_group.portfolio.location
-  resource_group_name = azurerm_resource_group.portfolio.name
+  location            = module.resource_group.location
+  resource_group_name = module.resource_group.name
 
   security_rule {
     name                       = "Deny-All-Inbound"
@@ -62,16 +71,16 @@ resource "azurerm_subnet_network_security_group_association" "portfolio_subnet_n
 
 resource "azurerm_public_ip" "portfolio_public_ip" {
   name                = "pip-cloud-dba-dev"
-  location            = azurerm_resource_group.portfolio.location
-  resource_group_name = azurerm_resource_group.portfolio.name
+  location            = module.resource_group.location
+  resource_group_name = module.resource_group.name
   allocation_method   = "Static"
   sku                 = "Standard"
 }
 
 resource "azurerm_network_interface" "portfolio_nic" {
   name                = "nic-cloud-dba-dev"
-  location            = azurerm_resource_group.portfolio.location
-  resource_group_name = azurerm_resource_group.portfolio.name
+  location            = module.resource_group.location
+  resource_group_name = module.resource_group.name
 
   ip_configuration {
     name                          = "internal"
@@ -83,8 +92,8 @@ resource "azurerm_network_interface" "portfolio_nic" {
 
 resource "azurerm_storage_account" "portfolio_storage" {
   name                = "stclouddbaportfolio01"
-  resource_group_name = azurerm_resource_group.portfolio.name
-  location            = azurerm_resource_group.portfolio.location
+  resource_group_name = module.resource_group.name
+  location            = module.resource_group.location
 
   account_tier             = "Standard"
   account_replication_type = "LRS"
@@ -98,7 +107,7 @@ resource "azurerm_storage_container" "portfolio_blob" {
 
 resource "azurerm_mssql_server" "portfolio_sql_server" {
   name                         = "sql-nenim-portfolio-cus-dev"
-  resource_group_name          = azurerm_resource_group.portfolio.name
+  resource_group_name          = module.resource_group.name
   location                     = "Central US"
   version                      = "12.0"
   administrator_login          = var.sql_admin_login
@@ -121,8 +130,8 @@ resource "azurerm_mssql_firewall_rule" "allow_my_ip" {
 
 resource "azurerm_log_analytics_workspace" "portfolio_law" {
   name                = "law-cloud-dba-dev"
-  location            = azurerm_resource_group.portfolio.location
-  resource_group_name = azurerm_resource_group.portfolio.name
+  location            = module.resource_group.location
+  resource_group_name = module.resource_group.name
   sku                 = "PerGB2018"
   retention_in_days   = 30
 }
@@ -131,8 +140,8 @@ data "azurerm_client_config" "current" {}
 
 resource "azurerm_key_vault" "portfolio_kv" {
   name                = "kv-nenim-cloud-dba-dev"
-  location            = azurerm_resource_group.portfolio.location
-  resource_group_name = azurerm_resource_group.portfolio.name
+  location            = module.resource_group.location
+  resource_group_name = module.resource_group.name
   tenant_id           = data.azurerm_client_config.current.tenant_id
 
   sku_name = "standard"
@@ -143,14 +152,14 @@ resource "azurerm_key_vault" "portfolio_kv" {
 
 resource "azurerm_data_factory" "portfolio_adf" {
   name                = "adf-nenim-cloud-dba-dev"
-  location            = azurerm_resource_group.portfolio.location
-  resource_group_name = azurerm_resource_group.portfolio.name
+  location            = module.resource_group.location
+  resource_group_name = module.resource_group.name
 }
 
 resource "azurerm_storage_account" "portfolio_adls" {
   name                     = "stnenimadlsdev01"
-  resource_group_name      = azurerm_resource_group.portfolio.name
-  location                 = azurerm_resource_group.portfolio.location
+  resource_group_name      = module.resource_group.name
+  location                 = module.resource_group.location
   account_tier             = "Standard"
   account_replication_type = "LRS"
 
@@ -177,7 +186,7 @@ resource "azurerm_storage_container" "gold" {
 
 resource "azurerm_databricks_workspace" "portfolio_databricks" {
   name                = "dbw-nenim-cloud-dba-dev"
-  resource_group_name = azurerm_resource_group.portfolio.name
-  location            = azurerm_resource_group.portfolio.location
+  resource_group_name = module.resource_group.name
+  location            = module.resource_group.location
   sku                 = "trial"
 }
