@@ -116,27 +116,41 @@ moved {
   to   = module.storage_account.azurerm_storage_container.this
 }
 
-resource "azurerm_mssql_server" "portfolio_sql_server" {
-  name                         = "sql-nenim-portfolio-cus-dev"
-  resource_group_name          = module.resource_group.name
-  location                     = "Central US"
-  version                      = "12.0"
+module "azure_sql" {
+  source = "./modules/azure-sql"
+
+  resource_group_name = module.resource_group.name
+  location            = "Central US"
+
+  server_name                  = "sql-nenim-portfolio-cus-dev"
+  server_version               = "12.0"
   administrator_login          = var.sql_admin_login
   administrator_login_password = var.sql_admin_password
+
+  database_name     = "CloudDBAPortfolioDB"
+  database_sku_name = "Basic"
+
+  firewall_rule_name        = "Allow-My-Current-IP"
+  firewall_start_ip_address = "172.56.222.194"
+  firewall_end_ip_address   = "172.56.222.194"
+
+  # Preserve the current Azure configuration during structural migration.
+  tags = {}
 }
 
-resource "azurerm_mssql_database" "portfolio_sql_db" {
-  name      = "CloudDBAPortfolioDB"
-  server_id = azurerm_mssql_server.portfolio_sql_server.id
-
-  sku_name = "Basic"
+moved {
+  from = azurerm_mssql_server.portfolio_sql_server
+  to   = module.azure_sql.azurerm_mssql_server.this
 }
 
-resource "azurerm_mssql_firewall_rule" "allow_my_ip" {
-  name             = "Allow-My-Current-IP"
-  server_id        = azurerm_mssql_server.portfolio_sql_server.id
-  start_ip_address = "172.56.222.194"
-  end_ip_address   = "172.56.222.194"
+moved {
+  from = azurerm_mssql_database.portfolio_sql_db
+  to   = module.azure_sql.azurerm_mssql_database.this
+}
+
+moved {
+  from = azurerm_mssql_firewall_rule.allow_my_ip
+  to   = module.azure_sql.azurerm_mssql_firewall_rule.client
 }
 
 resource "azurerm_log_analytics_workspace" "portfolio_law" {

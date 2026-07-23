@@ -27,15 +27,15 @@ output "blob_container_name" {
 }
 
 output "sql_server_name" {
-  value = azurerm_mssql_server.portfolio_sql_server.name
+  value = module.azure_sql.server_name
 }
 
 output "sql_database_name" {
-  value = azurerm_mssql_database.portfolio_sql_db.name
+  value = module.azure_sql.database_name
 }
 
 output "sql_server_fqdn" {
-  value = azurerm_mssql_server.portfolio_sql_server.fully_qualified_domain_name
+  value = module.azure_sql.server_fqdn
 }
 
 output "log_analytics_workspace_name" {
