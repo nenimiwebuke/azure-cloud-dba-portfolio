@@ -89,19 +89,31 @@ moved {
   to   = module.networking.azurerm_network_interface.this
 }
 
-resource "azurerm_storage_account" "portfolio_storage" {
-  name                = "stclouddbaportfolio01"
+module "storage_account" {
+  source = "./modules/storage-account"
+
   resource_group_name = module.resource_group.name
   location            = module.resource_group.location
 
+  storage_account_name     = "stclouddbaportfolio01"
   account_tier             = "Standard"
   account_replication_type = "LRS"
+  container_name           = "portfolio-data"
+  container_access_type    = "private"
+
+  # Preserve the current Azure configuration during structural migration.
+  # Enterprise tags will be introduced in a separate reviewed change.
+  tags = {}
 }
 
-resource "azurerm_storage_container" "portfolio_blob" {
-  name                  = "portfolio-data"
-  storage_account_id    = azurerm_storage_account.portfolio_storage.id
-  container_access_type = "private"
+moved {
+  from = azurerm_storage_account.portfolio_storage
+  to   = module.storage_account.azurerm_storage_account.this
+}
+
+moved {
+  from = azurerm_storage_container.portfolio_blob
+  to   = module.storage_account.azurerm_storage_container.this
 }
 
 resource "azurerm_mssql_server" "portfolio_sql_server" {

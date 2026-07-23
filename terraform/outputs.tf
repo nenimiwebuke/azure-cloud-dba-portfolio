@@ -19,11 +19,11 @@ output "nic_private_ip" {
 }
 
 output "storage_account_name" {
-  value = azurerm_storage_account.portfolio_storage.name
+  value = module.storage_account.storage_account_name
 }
 
 output "blob_container_name" {
-  value = azurerm_storage_container.portfolio_blob.name
+  value = module.storage_account.container_name
 }
 
 output "sql_server_name" {
