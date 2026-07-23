@@ -195,10 +195,20 @@ moved {
   to   = module.key_vault.azurerm_key_vault.this
 }
 
-resource "azurerm_data_factory" "portfolio_adf" {
+module "data_factory" {
+  source = "./modules/data-factory"
+
   name                = "adf-nenim-cloud-dba-dev"
   location            = module.resource_group.location
   resource_group_name = module.resource_group.name
+
+  # Preserve the current configuration during structural migration.
+  tags = {}
+}
+
+moved {
+  from = azurerm_data_factory.portfolio_adf
+  to   = module.data_factory.azurerm_data_factory.this
 }
 
 module "data_lake" {

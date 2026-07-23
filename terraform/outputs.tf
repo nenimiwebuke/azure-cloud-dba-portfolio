@@ -47,7 +47,7 @@ output "key_vault_name" {
 }
 
 output "data_factory_name" {
-  value = azurerm_data_factory.portfolio_adf.name
+  value = module.data_factory.name
 }
 
 output "adls_storage_account_name" {
