@@ -153,12 +153,23 @@ moved {
   to   = module.azure_sql.azurerm_mssql_firewall_rule.client
 }
 
-resource "azurerm_log_analytics_workspace" "portfolio_law" {
+module "log_analytics" {
+  source = "./modules/log-analytics"
+
   name                = "law-cloud-dba-dev"
   location            = module.resource_group.location
   resource_group_name = module.resource_group.name
-  sku                 = "PerGB2018"
-  retention_in_days   = 30
+
+  sku               = "PerGB2018"
+  retention_in_days = 30
+
+  # Preserve the current configuration during structural migration.
+  tags = {}
+}
+
+moved {
+  from = azurerm_log_analytics_workspace.portfolio_law
+  to   = module.log_analytics.azurerm_log_analytics_workspace.this
 }
 
 data "azurerm_client_config" "current" {}

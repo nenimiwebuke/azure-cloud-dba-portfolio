@@ -39,7 +39,7 @@ output "sql_server_fqdn" {
 }
 
 output "log_analytics_workspace_name" {
-  value = azurerm_log_analytics_workspace.portfolio_law.name
+  value = module.log_analytics.name
 }
 
 output "key_vault_name" {
