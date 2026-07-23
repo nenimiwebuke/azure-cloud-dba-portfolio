@@ -163,16 +163,25 @@ resource "azurerm_log_analytics_workspace" "portfolio_law" {
 
 data "azurerm_client_config" "current" {}
 
-resource "azurerm_key_vault" "portfolio_kv" {
+module "key_vault" {
+  source = "./modules/key-vault"
+
   name                = "kv-nenim-cloud-dba-dev"
   location            = module.resource_group.location
   resource_group_name = module.resource_group.name
   tenant_id           = data.azurerm_client_config.current.tenant_id
 
-  sku_name = "standard"
-
+  sku_name                   = "standard"
   purge_protection_enabled   = false
   soft_delete_retention_days = 7
+
+  # Preserve the current configuration during structural migration.
+  tags = {}
+}
+
+moved {
+  from = azurerm_key_vault.portfolio_kv
+  to   = module.key_vault.azurerm_key_vault.this
 }
 
 resource "azurerm_data_factory" "portfolio_adf" {
