@@ -18,13 +18,23 @@ provider "azurerm" {
   subscription_id = "4cef5174-3663-46bd-9870-d117cf748336"
 }
 
+locals {
+  common_tags = {
+    Environment = "dev"
+    Project     = "enterprise-data-platform"
+    Owner       = "Nenim Iwebuke"
+    ManagedBy   = "Terraform"
+    CostCenter  = "Engineering"
+  }
+}
+
 module "resource_group" {
   source = "./modules/resource-group"
 
   name     = "rg-cloud-dba-portfolio-dev"
   location = "East US"
 
-  tags = {}
+  tags = local.common_tags
 }
 
 moved {
@@ -46,7 +56,7 @@ module "networking" {
   public_ip_name          = "pip-cloud-dba-dev"
   nic_name                = "nic-cloud-dba-dev"
 
-  tags = {}
+  tags = local.common_tags
 }
 
 moved {
