@@ -51,19 +51,19 @@ output "data_factory_name" {
 }
 
 output "adls_storage_account_name" {
-  value = azurerm_storage_account.portfolio_adls.name
+  value = module.data_lake.storage_account_name
 }
 
 output "adls_bronze_container" {
-  value = azurerm_storage_container.bronze.name
+  value = module.data_lake.container_names["bronze"]
 }
 
 output "adls_silver_container" {
-  value = azurerm_storage_container.silver.name
+  value = module.data_lake.container_names["silver"]
 }
 
 output "adls_gold_container" {
-  value = azurerm_storage_container.gold.name
+  value = module.data_lake.container_names["gold"]
 }
 
 output "databricks_workspace_name" {

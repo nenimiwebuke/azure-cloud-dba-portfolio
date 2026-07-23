@@ -167,32 +167,44 @@ resource "azurerm_data_factory" "portfolio_adf" {
   resource_group_name = module.resource_group.name
 }
 
-resource "azurerm_storage_account" "portfolio_adls" {
-  name                     = "stnenimadlsdev01"
-  resource_group_name      = module.resource_group.name
-  location                 = module.resource_group.location
+module "data_lake" {
+  source = "./modules/data-lake"
+
+  resource_group_name = module.resource_group.name
+  location            = module.resource_group.location
+
+  storage_account_name     = "stnenimadlsdev01"
   account_tier             = "Standard"
   account_replication_type = "LRS"
 
-  is_hns_enabled = true
+  containers = [
+    "bronze",
+    "silver",
+    "gold"
+  ]
+
+  # Preserve the current configuration during structural migration.
+  tags = {}
 }
 
-resource "azurerm_storage_container" "bronze" {
-  name                  = "bronze"
-  storage_account_id    = azurerm_storage_account.portfolio_adls.id
-  container_access_type = "private"
+moved {
+  from = azurerm_storage_account.portfolio_adls
+  to   = module.data_lake.azurerm_storage_account.this
 }
 
-resource "azurerm_storage_container" "silver" {
-  name                  = "silver"
-  storage_account_id    = azurerm_storage_account.portfolio_adls.id
-  container_access_type = "private"
+moved {
+  from = azurerm_storage_container.bronze
+  to   = module.data_lake.azurerm_storage_container.layers["bronze"]
 }
 
-resource "azurerm_storage_container" "gold" {
-  name                  = "gold"
-  storage_account_id    = azurerm_storage_account.portfolio_adls.id
-  container_access_type = "private"
+moved {
+  from = azurerm_storage_container.silver
+  to   = module.data_lake.azurerm_storage_container.layers["silver"]
+}
+
+moved {
+  from = azurerm_storage_container.gold
+  to   = module.data_lake.azurerm_storage_container.layers["gold"]
 }
 
 resource "azurerm_databricks_workspace" "portfolio_databricks" {
