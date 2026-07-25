@@ -251,9 +251,18 @@ moved {
   to   = module.data_lake.azurerm_storage_container.layers["gold"]
 }
 
-resource "azurerm_databricks_workspace" "portfolio_databricks" {
+module "databricks" {
+  source = "./modules/databricks"
+
   name                = "dbw-nenim-cloud-dba-dev"
   resource_group_name = module.resource_group.name
   location            = module.resource_group.location
   sku                 = "trial"
+
+  tags = {}
+}
+
+moved {
+  from = azurerm_databricks_workspace.portfolio_databricks
+  to   = module.databricks.azurerm_databricks_workspace.this
 }

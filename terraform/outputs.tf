@@ -67,9 +67,9 @@ output "adls_gold_container" {
 }
 
 output "databricks_workspace_name" {
-  value = azurerm_databricks_workspace.portfolio_databricks.name
+  value = module.databricks.name
 }
 
 output "databricks_workspace_url" {
-  value = azurerm_databricks_workspace.portfolio_databricks.workspace_url
+  value = module.databricks.workspace_url
 }
