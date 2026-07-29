@@ -47,3 +47,7 @@ terraform.rc
 *.tfplan.*
 tfplan
 plan.out
+
+# Python
+__pycache__/
+*.pyc
