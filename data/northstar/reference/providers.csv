@@ -1,0 +1,16 @@
+provider_id,provider_name,provider_type,network_status,state,npi,tax_id,specialty,effective_date,termination_date,provider_status
+PRV10001,Capital Internal Medicine,Physician,In-Network,MD,1548236701,52-1847301,Internal Medicine,2022-01-01,,Active
+PRV10002,Potomac Family Health,Physician,In-Network,VA,1639472058,54-2938402,Family Medicine,2021-06-01,,Active
+PRV10003,Metro Orthopedic Associates,Physician,In-Network,DC,1760529384,53-4029583,Orthopedics,2020-03-15,,Active
+PRV10004,Chesapeake Imaging Center,Facility,In-Network,MD,1982746032,52-6739204,Diagnostic Imaging,2023-02-01,,Active
+PRV10005,Atlantic Regional Hospital,Hospital,In-Network,VA,1427193846,54-8392015,Acute Care Hospital,2019-01-01,,Active
+PRV10006,Midtown Urgent Care,Facility,Out-of-Network,NY,1679835204,13-7294051,Urgent Care,2024-01-01,,Active
+PRV10007,Blue Ridge Pediatrics,Physician,In-Network,NC,1316082947,56-1948372,Pediatrics,2022-08-01,,Active
+PRV10008,Gulf Coast Cardiology,Physician,In-Network,FL,1801947253,59-3048571,Cardiology,2021-04-01,,Active
+PRV10009,Lone Star Surgical Center,Facility,Out-of-Network,TX,1497820635,74-5920384,Ambulatory Surgery,2023-07-01,,Active
+PRV10010,Buckeye Behavioral Health,Facility,In-Network,OH,1215079364,31-4857203,Behavioral Health,2020-10-01,,Active
+PRV10011,Empire Dental Group,Dentist,In-Network,NY,1720138495,13-9482017,General Dentistry,2022-05-01,,Active
+PRV10012,Carolina Vision Specialists,Physician,In-Network,NC,1609927481,56-8301942,Ophthalmology,2021-09-01,,Active
+PRV10013,Sunrise Physical Therapy,Facility,In-Network,FL,1558402937,59-7203841,Physical Therapy,2024-03-01,,Active
+PRV10014,Great Lakes Neurology,Physician,Out-of-Network,OH,1841357092,34-1958204,Neurology,2023-01-01,,Active
+PRV10015,Legacy Community Clinic,Facility,In-Network,MD,1396884207,52-3849201,Primary Care,2018-01-01,2024-12-31,Terminated

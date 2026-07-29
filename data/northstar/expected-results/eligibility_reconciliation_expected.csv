@@ -1,0 +1,1812 @@
+enrollment_id,employee_id,expected_exception_type,expected_severity,expected_business_impact
+ENR000000004,EE0000003,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000000055,EE0000018,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000000076,EE0000025,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000000077,EE0000025,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000000093,EE0000030,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000000162,EE0000049,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000000164,EE0000049,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000000165,EE0000049,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000000168,EE0000050,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000000202,EE0000059,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000000206,EE0000060,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000000219,EE0000063,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000000220,EE0000063,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000000229,EE0000065,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000000245,EE0000071,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000000262,EE0000075,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000000263,EE0000075,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000000264,EE0000075,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000000268,EE0000077,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000000276,EE0000079,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000000370,EE0000101,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000000385,EE0000106,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000000463,EE0000132,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000000465,EE0000133,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000000512,EE0000143,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000000521,EE0000145,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000000533,EE0000151,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000000603,EE0000171,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000000607,EE0000172,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000000639,EE0000181,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000000664,EE0000190,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000000675,EE0000194,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000000678,EE0000196,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000000680,EE0000198,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000000688,EE0000199,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000000729,EE0000210,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000000739,EE0000212,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000000763,EE0000221,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000000811,EE0000232,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000000832,EE0000237,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000000834,EE0000237,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000000868,EE0000246,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000000881,EE0000249,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000000896,EE0000253,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000000913,EE0000257,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000000915,EE0000258,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000000917,EE0000258,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000000959,EE0000269,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000001036,EE0000291,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000001037,EE0000291,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000001059,EE0000298,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000001096,EE0000309,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000001106,EE0000312,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000001128,EE0000318,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000001157,EE0000325,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000001162,EE0000328,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000001205,EE0000339,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000001206,EE0000339,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000001240,EE0000346,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000001286,EE0000360,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000001287,EE0000360,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000001299,EE0000364,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000001311,EE0000366,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000001336,EE0000373,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000001401,EE0000389,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000001456,EE0000402,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000001498,EE0000413,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000001507,EE0000416,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000001519,EE0000419,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000001543,EE0000424,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000001545,EE0000425,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000001618,EE0000443,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000001648,EE0000450,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000001649,EE0000450,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000001654,EE0000451,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000001663,EE0000454,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000001707,EE0000465,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000001725,EE0000471,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000001732,EE0000473,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000001760,EE0000480,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000001818,EE0000496,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000001822,EE0000497,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000001825,EE0000497,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000001833,EE0000499,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000001846,EE0000503,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000001863,EE0000508,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000001870,EE0000511,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000001887,EE0000514,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000001937,EE0000527,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000001976,EE0000537,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000001998,EE0000543,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000002003,EE0000546,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000002037,EE0000556,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000002040,EE0000556,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000002054,EE0000560,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000002062,EE0000562,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000002071,EE0000564,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000002091,EE0000568,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000002108,EE0000573,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000002108,EE0000573,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000002114,EE0000574,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000002124,EE0000576,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000002126,EE0000577,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000002204,EE0000600,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000002207,EE0000600,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000002224,EE0000604,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000002255,EE0000613,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000002262,EE0000615,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000002287,EE0000620,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000002308,EE0000626,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000002345,EE0000636,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000002381,EE0000647,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000002386,EE0000649,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000002419,EE0000659,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000002426,EE0000661,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000002429,EE0000661,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000002446,EE0000667,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000002460,EE0000670,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000002469,EE0000673,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000002473,EE0000673,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000002494,EE0000683,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000002495,EE0000683,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000002503,EE0000685,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000002531,EE0000693,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000002539,EE0000696,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000002547,EE0000698,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000002560,EE0000701,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000002568,EE0000702,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000002576,EE0000704,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000002596,EE0000711,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000002598,EE0000711,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000002633,EE0000720,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000002637,EE0000721,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000002658,EE0000726,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000002669,EE0000728,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000002671,EE0000728,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000002674,EE0000729,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000002678,EE0000730,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000002714,EE0000739,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000002716,EE0000741,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000002728,EE0000744,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000002731,EE0000744,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000002750,EE0000748,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000002759,EE0000751,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000002798,EE0000760,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000002847,EE0000771,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000002851,EE0000773,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000002857,EE0000774,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000002870,EE0000779,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000002872,EE0000780,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000002878,EE0000781,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000002888,EE0000785,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000002890,EE0000785,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000002895,EE0000786,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000002960,EE0000802,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000002969,EE0000804,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000002980,EE0000807,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000002985,EE0000809,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000002991,EE0000811,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000003033,EE0000820,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000003045,EE0000824,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000003067,EE0000832,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000003110,EE0000844,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000003115,EE0000846,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000003130,EE0000850,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000003184,EE0000869,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000003208,EE0000876,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000003211,EE0000876,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000003220,EE0000879,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000003268,EE0000891,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000003270,EE0000892,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000003275,EE0000893,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000003281,EE0000895,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000003310,EE0000902,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000003421,EE0000928,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000003512,EE0000955,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000003564,EE0000968,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000003574,EE0000971,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000003578,EE0000972,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000003590,EE0000974,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000003600,EE0000979,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000003601,EE0000979,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000003627,EE0000987,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000003650,EE0000997,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000003669,EE0001001,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000003701,EE0001009,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000003727,EE0001017,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000003728,EE0001017,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000003737,EE0001019,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000003773,EE0001031,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000003779,EE0001034,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000003790,EE0001037,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000003794,EE0001038,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000003845,EE0001049,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000003859,EE0001052,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000003867,EE0001056,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000003895,EE0001063,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000003898,EE0001065,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000003914,EE0001070,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000003933,EE0001076,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000003998,EE0001095,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000004026,EE0001105,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000004035,EE0001108,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000004040,EE0001109,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000004054,EE0001112,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000004055,EE0001112,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000004060,EE0001114,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000004064,EE0001114,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000004076,EE0001117,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000004077,EE0001117,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000004082,EE0001120,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000004130,EE0001131,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000004153,EE0001141,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000004192,EE0001150,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000004220,EE0001155,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000004230,EE0001158,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000004249,EE0001162,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000004260,EE0001164,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000004343,EE0001189,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000004352,EE0001191,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000004402,EE0001205,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000004441,EE0001215,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000004454,EE0001220,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000004469,EE0001224,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000004484,EE0001229,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000004485,EE0001229,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000004490,EE0001230,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000004540,EE0001243,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000004559,EE0001247,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000004578,EE0001252,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000004587,EE0001254,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000004589,EE0001254,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000004590,EE0001254,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000004608,EE0001259,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000004650,EE0001271,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000004659,EE0001275,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000004659,EE0001275,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000004674,EE0001278,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000004679,EE0001280,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000004697,EE0001284,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000004711,EE0001288,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000004738,EE0001295,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000004763,EE0001301,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000004773,EE0001303,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000004780,EE0001306,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000004799,EE0001311,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000004812,EE0001314,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000004820,EE0001316,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000004838,EE0001320,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000004850,EE0001323,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000004856,EE0001324,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000004873,EE0001329,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000004875,EE0001329,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000004876,EE0001330,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000004912,EE0001341,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000004941,EE0001347,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000004947,EE0001349,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000004960,EE0001353,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000004968,EE0001355,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000004992,EE0001359,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000004993,EE0001360,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000005027,EE0001372,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000005029,EE0001372,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000005059,EE0001379,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000005077,EE0001383,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000005103,EE0001391,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000005109,EE0001394,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000005112,EE0001394,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000005155,EE0001405,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000005158,EE0001406,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000005159,EE0001406,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000005174,EE0001410,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000005192,EE0001414,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000005222,EE0001421,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000005225,EE0001422,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000005226,EE0001422,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000005261,EE0001430,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000005306,EE0001447,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000005309,EE0001447,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000005315,EE0001449,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000005328,EE0001453,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000005391,EE0001471,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000005417,EE0001477,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000005460,EE0001487,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000005469,EE0001491,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000005517,EE0001502,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000005527,EE0001505,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000005552,EE0001511,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000005632,EE0001532,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000005639,EE0001534,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000005713,EE0001554,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000005715,EE0001555,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000005731,EE0001558,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000005758,EE0001564,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000005808,EE0001580,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000005836,EE0001589,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000005855,EE0001595,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000005857,EE0001595,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000005858,EE0001595,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000005896,EE0001604,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000005900,EE0001605,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000005909,EE0001607,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000005927,EE0001610,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000005937,EE0001612,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000005940,EE0001613,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000005982,EE0001624,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000005983,EE0001624,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000006066,EE0001644,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000006104,EE0001654,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000006140,EE0001664,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000006141,EE0001665,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000006159,EE0001670,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000006162,EE0001670,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000006177,EE0001674,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000006198,EE0001683,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000006228,EE0001695,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000006239,EE0001697,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000006240,EE0001698,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000006249,EE0001700,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000006258,EE0001702,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000006265,EE0001704,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000006302,EE0001713,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000006306,EE0001713,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000006319,EE0001717,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000006340,EE0001722,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000006363,EE0001731,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000006371,EE0001733,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000006388,EE0001736,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000006393,EE0001737,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000006408,EE0001741,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000006413,EE0001742,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000006420,EE0001745,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000006457,EE0001756,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000006483,EE0001763,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000006525,EE0001775,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000006564,EE0001785,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000006605,EE0001797,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000006663,EE0001811,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000006674,EE0001814,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000006682,EE0001817,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000006684,EE0001817,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000006746,EE0001834,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000006751,EE0001835,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000006780,EE0001843,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000006811,EE0001851,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000006820,EE0001854,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000006862,EE0001862,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000006866,EE0001864,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000006894,EE0001872,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000006902,EE0001874,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000006921,EE0001879,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000006931,EE0001882,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000006936,EE0001883,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000006945,EE0001885,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000006974,EE0001895,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000007028,EE0001910,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000007065,EE0001919,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000007083,EE0001925,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000007091,EE0001926,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000007142,EE0001942,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000007147,EE0001943,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000007155,EE0001947,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000007165,EE0001949,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000007166,EE0001949,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000007168,EE0001949,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000007192,EE0001956,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000007220,EE0001962,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000007281,EE0001981,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000007290,EE0001982,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000007304,EE0001986,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000007311,EE0001987,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000007319,EE0001989,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000007326,EE0001991,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000007338,EE0001993,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000007339,EE0001994,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000007343,EE0001995,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000007396,EE0002010,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000007417,EE0002017,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000007420,EE0002017,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000007427,EE0002020,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000007467,EE0002030,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000007500,EE0002037,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000007545,EE0002050,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000007551,EE0002052,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000007607,EE0002069,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000007614,EE0002070,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000007634,EE0002074,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000007735,EE0002102,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000007742,EE0002104,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000007773,EE0002111,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000007861,EE0002138,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000007900,EE0002148,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000007910,EE0002152,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000007919,EE0002154,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000007922,EE0002154,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000007923,EE0002155,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000007932,EE0002157,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000007983,EE0002168,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000007987,EE0002169,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000007999,EE0002172,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000008005,EE0002173,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000008025,EE0002182,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000008067,EE0002192,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000008071,EE0002193,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000008132,EE0002208,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000008168,EE0002218,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000008173,EE0002219,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000008176,EE0002220,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000008181,EE0002221,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000008186,EE0002222,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000008211,EE0002228,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000008228,EE0002233,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000008245,EE0002239,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000008259,EE0002241,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000008273,EE0002245,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000008306,EE0002252,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000008313,EE0002253,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000008348,EE0002264,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000008375,EE0002270,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000008481,EE0002299,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000008503,EE0002304,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000008509,EE0002305,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000008509,EE0002305,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000008577,EE0002326,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000008586,EE0002328,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000008610,EE0002333,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000008634,EE0002338,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000008641,EE0002340,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000008647,EE0002344,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000008714,EE0002362,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000008734,EE0002368,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000008744,EE0002370,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000008776,EE0002378,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000008781,EE0002379,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000008784,EE0002379,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000008795,EE0002384,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000008824,EE0002392,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000008841,EE0002398,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000008845,EE0002399,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000008856,EE0002403,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000008865,EE0002406,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000008882,EE0002412,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000008968,EE0002436,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000008972,EE0002437,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000009004,EE0002445,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000009012,EE0002448,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000009021,EE0002450,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000009043,EE0002455,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000009053,EE0002457,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000009074,EE0002465,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000009079,EE0002466,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000009081,EE0002466,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000009096,EE0002470,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000009134,EE0002479,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000009137,EE0002479,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000009143,EE0002480,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000009144,EE0002481,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000009188,EE0002493,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000009203,EE0002496,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000009213,EE0002499,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000009258,EE0002512,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000009324,EE0002526,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000009333,EE0002528,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000009335,EE0002529,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000009395,EE0002549,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000009402,EE0002550,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000009404,EE0002552,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000009421,EE0002556,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000009433,EE0002560,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000009447,EE0002565,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000009452,EE0002567,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000009505,EE0002580,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000009508,EE0002583,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000009512,EE0002584,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000009536,EE0002591,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000009565,EE0002599,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000009588,EE0002605,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000009590,EE0002606,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000009607,EE0002610,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000009654,EE0002621,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000009658,EE0002622,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000009735,EE0002645,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000009737,EE0002645,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000009739,EE0002646,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000009795,EE0002665,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000009802,EE0002667,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000009835,EE0002677,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000009856,EE0002684,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000009894,EE0002692,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000009900,EE0002694,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000009914,EE0002698,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000009952,EE0002706,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000009957,EE0002707,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000010010,EE0002721,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000010013,EE0002723,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000010018,EE0002724,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000010019,EE0002724,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000010028,EE0002726,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000010051,EE0002732,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000010058,EE0002733,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000010061,EE0002734,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000010080,EE0002740,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000010084,EE0002742,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000010121,EE0002752,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000010137,EE0002755,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000010186,EE0002770,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000010212,EE0002776,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000010219,EE0002780,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000010234,EE0002785,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000010253,EE0002790,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000010281,EE0002797,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000010285,EE0002798,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000010307,EE0002806,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000010317,EE0002808,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000010352,EE0002821,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000010362,EE0002823,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000010364,EE0002824,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000010368,EE0002824,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000010376,EE0002827,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000010379,EE0002829,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000010398,EE0002833,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000010401,EE0002834,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000010405,EE0002835,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000010409,EE0002836,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000010415,EE0002837,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000010416,EE0002837,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000010435,EE0002843,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000010470,EE0002850,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000010517,EE0002866,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000010540,EE0002872,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000010594,EE0002890,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000010599,EE0002891,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000010615,EE0002898,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000010624,EE0002900,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000010637,EE0002902,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000010663,EE0002909,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000010754,EE0002933,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000010760,EE0002934,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000010775,EE0002940,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000010780,EE0002941,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000010782,EE0002942,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000010793,EE0002944,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000010824,EE0002952,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000010860,EE0002962,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000010893,EE0002969,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000010901,EE0002971,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000010906,EE0002972,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000010911,EE0002973,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000010935,EE0002981,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000010944,EE0002983,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000010946,EE0002984,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000010973,EE0002990,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000011028,EE0003005,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000011053,EE0003010,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000011060,EE0003012,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000011077,EE0003015,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000011081,EE0003016,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000011117,EE0003027,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000011142,EE0003034,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000011183,EE0003046,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000011193,EE0003049,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000011218,EE0003057,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000011225,EE0003058,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000011228,EE0003059,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000011259,EE0003066,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000011263,EE0003067,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000011290,EE0003073,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000011294,EE0003074,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000011319,EE0003082,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000011351,EE0003091,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000011368,EE0003096,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000011374,EE0003099,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000011436,EE0003117,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000011445,EE0003120,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000011453,EE0003122,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000011521,EE0003139,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000011534,EE0003142,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000011591,EE0003161,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000011631,EE0003170,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000011640,EE0003172,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000011650,EE0003174,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000011674,EE0003181,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000011691,EE0003184,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000011707,EE0003191,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000011733,EE0003198,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000011734,EE0003198,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000011741,EE0003201,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000011748,EE0003204,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000011749,EE0003207,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000011789,EE0003216,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000011808,EE0003223,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000011849,EE0003236,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000011905,EE0003254,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000011907,EE0003256,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000011916,EE0003258,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000011923,EE0003259,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000011925,EE0003259,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000011926,EE0003260,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000011944,EE0003264,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000011972,EE0003272,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000011977,EE0003273,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000012021,EE0003286,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000012075,EE0003301,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000012086,EE0003304,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000012111,EE0003310,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000012137,EE0003318,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000012177,EE0003327,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000012215,EE0003338,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000012230,EE0003342,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000012296,EE0003358,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000012334,EE0003367,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000012336,EE0003368,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000012346,EE0003370,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000012359,EE0003373,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000012364,EE0003374,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000012373,EE0003376,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000012408,EE0003385,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000012409,EE0003385,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000012413,EE0003386,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000012422,EE0003388,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000012428,EE0003390,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000012524,EE0003424,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000012570,EE0003436,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000012604,EE0003445,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000012614,EE0003447,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000012618,EE0003447,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000012628,EE0003450,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000012687,EE0003466,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000012712,EE0003471,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000012738,EE0003480,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000012748,EE0003482,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000012755,EE0003484,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000012772,EE0003489,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000012777,EE0003490,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000012810,EE0003498,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000012815,EE0003499,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000012845,EE0003506,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000012848,EE0003507,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000012894,EE0003518,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000012900,EE0003519,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000012925,EE0003525,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000012935,EE0003528,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000012954,EE0003533,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000012971,EE0003537,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000013027,EE0003552,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000013033,EE0003555,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000013046,EE0003558,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000013116,EE0003575,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000013202,EE0003603,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000013206,EE0003605,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000013210,EE0003606,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000013218,EE0003608,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000013223,EE0003609,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000013241,EE0003616,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000013282,EE0003626,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000013293,EE0003629,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000013297,EE0003629,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000013333,EE0003640,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000013339,EE0003641,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000013352,EE0003645,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000013357,EE0003646,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000013392,EE0003656,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000013422,EE0003665,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000013423,EE0003665,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000013428,EE0003667,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000013458,EE0003675,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000013459,EE0003677,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000013491,EE0003686,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000013493,EE0003686,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000013525,EE0003694,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000013572,EE0003706,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000013628,EE0003721,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000013635,EE0003722,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000013658,EE0003729,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000013747,EE0003754,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000013753,EE0003755,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000013765,EE0003758,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000013781,EE0003761,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000013782,EE0003762,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000013785,EE0003762,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000013799,EE0003765,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000013844,EE0003777,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000013875,EE0003787,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000013886,EE0003790,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000013912,EE0003799,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000013954,EE0003812,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000013978,EE0003819,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000013990,EE0003822,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000014110,EE0003852,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000014113,EE0003853,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000014125,EE0003855,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000014170,EE0003868,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000014208,EE0003878,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000014227,EE0003883,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000014236,EE0003885,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000014242,EE0003886,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000014281,EE0003897,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000014301,EE0003902,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000014433,EE0003936,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000014444,EE0003939,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000014459,EE0003943,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000014469,EE0003946,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000014479,EE0003949,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000014499,EE0003956,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000014523,EE0003962,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000014525,EE0003964,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000014540,EE0003967,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000014566,EE0003978,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000014578,EE0003981,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000014585,EE0003983,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000014600,EE0003987,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000014606,EE0003989,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000014607,EE0003989,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000014610,EE0003990,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000014633,EE0003995,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000014690,EE0004011,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000014741,EE0004024,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000014747,EE0004025,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000014750,EE0004026,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000014766,EE0004031,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000014768,EE0004031,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000014773,EE0004032,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000014781,EE0004034,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000014786,EE0004036,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000014836,EE0004048,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000014886,EE0004063,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000014908,EE0004070,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000014954,EE0004080,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000015024,EE0004099,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000015024,EE0004099,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000015057,EE0004108,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000015076,EE0004112,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000015093,EE0004119,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000015096,EE0004121,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000015097,EE0004121,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000015118,EE0004128,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000015128,EE0004132,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000015215,EE0004155,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000015221,EE0004157,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000015229,EE0004159,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000015241,EE0004162,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000015242,EE0004162,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000015261,EE0004167,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000015269,EE0004169,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000015287,EE0004174,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000015324,EE0004185,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000015334,EE0004187,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000015345,EE0004192,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000015351,EE0004194,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000015352,EE0004194,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000015492,EE0004236,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000015502,EE0004240,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000015507,EE0004241,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000015578,EE0004261,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000015580,EE0004262,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000015605,EE0004268,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000015626,EE0004277,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000015654,EE0004283,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000015681,EE0004291,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000015685,EE0004292,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000015687,EE0004292,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000015697,EE0004294,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000015723,EE0004303,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000015748,EE0004312,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000015749,EE0004312,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000015753,EE0004313,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000015783,EE0004321,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000015793,EE0004324,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000015802,EE0004326,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000015824,EE0004332,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000015828,EE0004333,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000015865,EE0004342,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000015868,EE0004343,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000015904,EE0004355,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000015942,EE0004366,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000015966,EE0004373,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000015974,EE0004374,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000015981,EE0004376,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000016015,EE0004386,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000016022,EE0004388,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000016064,EE0004403,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000016065,EE0004403,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000016076,EE0004407,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000016084,EE0004408,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000016105,EE0004415,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000016113,EE0004417,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000016136,EE0004423,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000016140,EE0004425,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000016141,EE0004425,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000016161,EE0004430,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000016162,EE0004430,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000016202,EE0004441,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000016220,EE0004446,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000016232,EE0004449,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000016234,EE0004450,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000016296,EE0004468,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000016309,EE0004471,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000016324,EE0004475,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000016346,EE0004481,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000016350,EE0004481,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000016356,EE0004483,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000016360,EE0004483,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000016363,EE0004484,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000016364,EE0004484,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000016399,EE0004493,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000016409,EE0004497,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000016417,EE0004498,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000016427,EE0004500,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000016431,EE0004502,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000016435,EE0004503,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000016463,EE0004510,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000016475,EE0004512,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000016493,EE0004518,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000016513,EE0004522,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000016532,EE0004526,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000016561,EE0004536,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000016578,EE0004540,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000016593,EE0004543,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000016596,EE0004544,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000016676,EE0004567,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000016688,EE0004571,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000016729,EE0004581,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000016758,EE0004587,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000016759,EE0004587,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000016762,EE0004588,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000016778,EE0004592,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000016823,EE0004603,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000016824,EE0004603,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000016834,EE0004606,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000016889,EE0004622,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000016898,EE0004624,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000016915,EE0004628,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000016916,EE0004628,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000016917,EE0004628,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000016948,EE0004636,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000016955,EE0004637,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000017019,EE0004653,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000017055,EE0004664,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000017074,EE0004671,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000017095,EE0004676,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000017099,EE0004677,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000017105,EE0004678,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000017114,EE0004680,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000017115,EE0004680,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000017123,EE0004684,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000017137,EE0004688,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000017140,EE0004689,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000017153,EE0004692,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000017182,EE0004699,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000017197,EE0004702,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000017211,EE0004706,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000017219,EE0004707,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000017228,EE0004710,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000017241,EE0004713,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000017297,EE0004732,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000017324,EE0004739,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000017344,EE0004744,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000017350,EE0004745,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000017432,EE0004768,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000017435,EE0004770,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000017448,EE0004774,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000017450,EE0004774,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000017456,EE0004775,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000017523,EE0004796,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000017559,EE0004804,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000017579,EE0004811,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000017595,EE0004816,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000017634,EE0004827,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000017652,EE0004831,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000017659,EE0004833,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000017699,EE0004845,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000017706,EE0004846,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000017708,EE0004848,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000017710,EE0004848,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000017732,EE0004855,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000017742,EE0004857,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000017769,EE0004866,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000017783,EE0004871,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000017810,EE0004881,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000017827,EE0004889,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000017861,EE0004901,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000017870,EE0004903,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000017874,EE0004905,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000017900,EE0004914,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000017943,EE0004924,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000017988,EE0004937,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000017990,EE0004939,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000017996,EE0004940,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000018043,EE0004953,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000018047,EE0004954,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000018048,EE0004954,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000018118,EE0004971,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000018137,EE0004978,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000018142,EE0004979,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000018154,EE0004982,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000018192,EE0004991,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000018203,EE0004994,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000018248,EE0005005,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000018267,EE0005010,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000018313,EE0005022,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000018315,EE0005022,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000018382,EE0005039,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000018395,EE0005041,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000018428,EE0005052,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000018435,EE0005053,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000018438,EE0005055,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000018460,EE0005061,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000018467,EE0005062,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000018511,EE0005073,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000018527,EE0005077,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000018531,EE0005078,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000018544,EE0005083,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000018546,EE0005083,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000018560,EE0005088,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000018605,EE0005100,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000018620,EE0005103,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000018642,EE0005111,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000018668,EE0005118,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000018705,EE0005126,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000018712,EE0005128,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000018770,EE0005143,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000018774,EE0005144,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000018778,EE0005145,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000018786,EE0005147,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000018788,EE0005147,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000018802,EE0005152,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000018824,EE0005156,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000018847,EE0005164,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000018851,EE0005165,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000018896,EE0005178,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000018930,EE0005187,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000018949,EE0005191,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000018967,EE0005195,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000019023,EE0005209,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000019087,EE0005229,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000019088,EE0005229,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000019120,EE0005238,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000019128,EE0005240,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000019131,EE0005241,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000019179,EE0005253,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000019207,EE0005260,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000019251,EE0005271,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000019252,EE0005271,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000019257,EE0005272,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000019262,EE0005273,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000019270,EE0005275,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000019271,EE0005276,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000019280,EE0005280,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000019283,EE0005280,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000019284,EE0005281,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000019296,EE0005283,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000019305,EE0005286,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000019321,EE0005290,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000019329,EE0005292,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000019370,EE0005303,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000019382,EE0005306,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000019384,EE0005307,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000019412,EE0005315,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000019428,EE0005321,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000019442,EE0005324,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000019509,EE0005339,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000019540,EE0005347,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000019570,EE0005357,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000019573,EE0005358,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000019596,EE0005365,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000019600,EE0005366,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000019614,EE0005371,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000019617,EE0005372,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000019625,EE0005374,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000019630,EE0005375,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000019651,EE0005380,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000019671,EE0005385,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000019680,EE0005386,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000019713,EE0005396,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000019721,EE0005399,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000019725,EE0005402,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000019726,EE0005402,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000019765,EE0005412,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000019771,EE0005413,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000019775,EE0005414,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000019785,EE0005416,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000019803,EE0005421,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000019829,EE0005427,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000019834,EE0005428,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000019841,EE0005430,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000019866,EE0005437,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000019867,EE0005438,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000019876,EE0005440,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000019887,EE0005442,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000019940,EE0005453,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000019949,EE0005457,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000019983,EE0005468,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000020035,EE0005481,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000020038,EE0005483,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000020073,EE0005492,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000020132,EE0005507,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000020155,EE0005514,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000020168,EE0005517,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000020188,EE0005521,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000020200,EE0005525,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000020220,EE0005530,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000020255,EE0005538,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000020263,EE0005540,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000020269,EE0005541,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000020301,EE0005549,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000020307,EE0005551,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000020317,EE0005553,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000020345,EE0005562,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000020347,EE0005562,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000020385,EE0005575,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000020429,EE0005587,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000020440,EE0005590,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000020447,EE0005591,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000020455,EE0005593,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000020466,EE0005596,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000020496,EE0005603,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000020500,EE0005604,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000020529,EE0005612,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000020547,EE0005620,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000020554,EE0005621,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000020597,EE0005634,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000020623,EE0005640,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000020628,EE0005642,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000020629,EE0005642,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000020642,EE0005647,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000020651,EE0005649,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000020657,EE0005652,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000020715,EE0005670,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000020746,EE0005679,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000020751,EE0005680,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000020767,EE0005686,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000020779,EE0005689,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000020838,EE0005704,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000020841,EE0005705,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000020867,EE0005712,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000020940,EE0005734,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000020964,EE0005741,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000020976,EE0005743,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000020981,EE0005747,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000021001,EE0005751,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000021019,EE0005756,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000021030,EE0005759,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000021032,EE0005759,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000021039,EE0005761,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000021055,EE0005766,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000021064,EE0005769,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000021075,EE0005772,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000021089,EE0005775,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000021105,EE0005779,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000021115,EE0005782,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000021119,EE0005783,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000021187,EE0005804,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000021188,EE0005804,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000021201,EE0005809,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000021221,EE0005813,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000021267,EE0005829,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000021314,EE0005841,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000021360,EE0005852,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000021407,EE0005865,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000021410,EE0005865,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000021413,EE0005866,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000021426,EE0005871,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000021434,EE0005872,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000021439,EE0005873,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000021476,EE0005884,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000021496,EE0005888,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000021509,EE0005892,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000021523,EE0005897,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000021607,EE0005919,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000021609,EE0005920,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000021669,EE0005940,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000021689,EE0005945,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000021712,EE0005950,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000021730,EE0005954,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000021744,EE0005957,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000021747,EE0005958,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000021751,EE0005959,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000021768,EE0005966,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000021771,EE0005967,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000021773,EE0005967,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000021778,EE0005968,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000021844,EE0005987,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000021861,EE0005992,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000021886,EE0006001,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000021887,EE0006001,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000021929,EE0006015,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000021941,EE0006019,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000021951,EE0006021,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000021961,EE0006025,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000022002,EE0006039,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000022004,EE0006040,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000022015,EE0006043,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000022028,EE0006047,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000022115,EE0006076,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000022126,EE0006078,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000022160,EE0006087,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000022189,EE0006099,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000022194,EE0006100,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000022206,EE0006104,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000022210,EE0006105,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000022225,EE0006109,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000022237,EE0006112,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000022282,EE0006124,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000022316,EE0006135,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000022340,EE0006141,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000022343,EE0006142,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000022349,EE0006143,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000022362,EE0006148,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000022381,EE0006155,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000022386,EE0006156,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000022398,EE0006159,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000022411,EE0006162,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000022422,EE0006167,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000022433,EE0006169,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000022436,EE0006170,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000022450,EE0006174,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000022455,EE0006175,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000022469,EE0006178,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000022567,EE0006206,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000022607,EE0006217,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000022615,EE0006219,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000022674,EE0006238,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000022756,EE0006265,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000022786,EE0006271,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000022790,EE0006272,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000022795,EE0006273,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000022815,EE0006279,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000022818,EE0006280,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000022859,EE0006290,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000022863,EE0006292,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000022878,EE0006296,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000022962,EE0006321,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000022977,EE0006324,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000022980,EE0006326,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000023043,EE0006346,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000023094,EE0006358,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000023104,EE0006360,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000023139,EE0006368,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000023173,EE0006380,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000023192,EE0006384,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000023201,EE0006385,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000023202,EE0006387,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000023232,EE0006395,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000023240,EE0006398,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000023256,EE0006401,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000023260,EE0006402,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000023268,EE0006405,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000023294,EE0006415,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000023305,EE0006417,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000023344,EE0006427,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000023381,EE0006440,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000023441,EE0006458,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000023573,EE0006497,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000023592,EE0006501,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000023596,EE0006502,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000023602,EE0006504,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000023608,EE0006507,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000023629,EE0006512,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000023636,EE0006515,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000023669,EE0006522,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000023727,EE0006538,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000023758,EE0006547,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000023771,EE0006551,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000023786,EE0006554,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000023794,EE0006556,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000023806,EE0006559,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000023838,EE0006567,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000023841,EE0006568,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000023865,EE0006573,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000023881,EE0006577,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000023897,EE0006583,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000023933,EE0006593,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000023950,EE0006597,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000023963,EE0006605,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000023988,EE0006613,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000024004,EE0006616,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000024010,EE0006618,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000024016,EE0006619,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000024034,EE0006624,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000024081,EE0006638,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000024112,EE0006646,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000024147,EE0006656,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000024172,EE0006664,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000024190,EE0006669,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000024240,EE0006682,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000024257,EE0006687,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000024264,EE0006688,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000024289,EE0006695,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000024324,EE0006707,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000024330,EE0006708,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000024346,EE0006712,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000024371,EE0006718,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000024373,EE0006718,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000024385,EE0006721,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000024411,EE0006730,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000024412,EE0006730,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000024439,EE0006737,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000024443,EE0006738,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000024459,EE0006742,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000024462,EE0006742,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000024468,EE0006744,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000024480,EE0006748,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000024489,EE0006751,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000024490,EE0006751,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000024498,EE0006753,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000024530,EE0006760,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000024597,EE0006783,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000024616,EE0006790,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000024621,EE0006791,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000024622,EE0006791,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000024631,EE0006793,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000024660,EE0006802,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000024670,EE0006804,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000024702,EE0006815,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000024721,EE0006819,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000024732,EE0006821,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000024738,EE0006825,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000024778,EE0006838,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000024781,EE0006838,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000024809,EE0006845,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000024833,EE0006851,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000024841,EE0006855,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000024958,EE0006885,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000024979,EE0006890,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000024980,EE0006890,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000025010,EE0006898,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000025040,EE0006906,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000025045,EE0006907,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000025059,EE0006910,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000025065,EE0006913,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000025120,EE0006926,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000025124,EE0006927,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000025140,EE0006932,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000025163,EE0006938,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000025165,EE0006939,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000025172,EE0006940,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000025211,EE0006949,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000025253,EE0006961,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000025308,EE0006978,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000025316,EE0006979,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000025338,EE0006987,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000025365,EE0006993,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000025416,EE0007005,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000025435,EE0007010,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000025480,EE0007024,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000025487,EE0007025,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000025495,EE0007027,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000025514,EE0007032,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000025516,EE0007032,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000025530,EE0007037,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000025559,EE0007045,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000025597,EE0007057,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000025602,EE0007058,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000025631,EE0007067,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000025642,EE0007070,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000025662,EE0007075,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000025665,EE0007076,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000025703,EE0007087,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000025711,EE0007088,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000025745,EE0007098,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000025786,EE0007107,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000025787,EE0007107,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000025870,EE0007130,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000025875,EE0007131,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000025924,EE0007146,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000025937,EE0007149,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000025958,EE0007154,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000025961,EE0007155,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000025964,EE0007156,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000026037,EE0007173,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000026078,EE0007183,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000026088,EE0007186,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000026091,EE0007188,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000026092,EE0007188,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000026118,EE0007194,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000026126,EE0007196,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000026157,EE0007206,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000026164,EE0007207,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000026168,EE0007208,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000026170,EE0007209,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000026224,EE0007226,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000026260,EE0007237,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000026267,EE0007238,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000026283,EE0007244,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000026312,EE0007251,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000026332,EE0007258,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000026342,EE0007260,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000026363,EE0007268,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000026382,EE0007274,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000026412,EE0007283,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000026425,EE0007286,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000026487,EE0007307,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000026510,EE0007312,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000026527,EE0007316,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000026548,EE0007323,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000026554,EE0007325,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000026582,EE0007333,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000026621,EE0007344,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000026649,EE0007350,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000026662,EE0007353,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000026686,EE0007363,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000026718,EE0007371,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000026730,EE0007374,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000026764,EE0007382,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000026769,EE0007383,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000026815,EE0007394,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000026824,EE0007396,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000026829,EE0007397,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000026845,EE0007402,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000026927,EE0007426,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000026981,EE0007442,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000026990,EE0007445,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000027049,EE0007459,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000027095,EE0007472,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000027146,EE0007484,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000027168,EE0007491,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000027224,EE0007507,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000027225,EE0007507,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000027265,EE0007516,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000027287,EE0007523,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000027291,EE0007525,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000027309,EE0007531,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000027316,EE0007532,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000027347,EE0007541,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000027357,EE0007543,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000027365,EE0007545,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000027418,EE0007560,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000027440,EE0007565,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000027454,EE0007569,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000027457,EE0007569,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000027459,EE0007570,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000027502,EE0007580,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000027504,EE0007581,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000027514,EE0007583,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000027517,EE0007583,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000027523,EE0007585,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000027538,EE0007588,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000027540,EE0007588,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000027541,EE0007589,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000027546,EE0007590,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000027547,EE0007590,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000027588,EE0007600,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000027595,EE0007603,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000027625,EE0007613,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000027641,EE0007620,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000027655,EE0007623,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000027657,EE0007623,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000027664,EE0007624,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000027684,EE0007629,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000027693,EE0007631,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000027696,EE0007633,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000027703,EE0007634,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000027722,EE0007638,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000027732,EE0007642,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000027807,EE0007658,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000027838,EE0007666,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000027856,EE0007672,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000027863,EE0007673,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000027898,EE0007682,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000027910,EE0007685,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000027930,EE0007689,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000027955,EE0007699,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000027957,EE0007699,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000027958,EE0007700,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000027963,EE0007701,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000027970,EE0007702,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000027975,EE0007705,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000028036,EE0007720,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000028043,EE0007721,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000028126,EE0007743,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000028145,EE0007748,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000028170,EE0007754,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000028182,EE0007757,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000028186,EE0007758,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000028206,EE0007762,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000028207,EE0007762,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000028216,EE0007764,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000028224,EE0007766,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000028244,EE0007773,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000028247,EE0007774,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000028249,EE0007774,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000028259,EE0007777,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000028263,EE0007777,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000028285,EE0007783,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000028332,EE0007795,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000028350,EE0007801,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000028378,EE0007808,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000028398,EE0007814,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000028456,EE0007829,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000028462,EE0007831,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000028496,EE0007841,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000028497,EE0007842,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000028563,EE0007857,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000028576,EE0007861,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000028580,EE0007862,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000028634,EE0007878,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000028690,EE0007893,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000028694,EE0007894,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000028709,EE0007897,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000028714,EE0007898,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000028717,EE0007900,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000028734,EE0007904,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000028737,EE0007906,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000028752,EE0007909,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000028766,EE0007914,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000028772,EE0007917,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000028801,EE0007925,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000028871,EE0007943,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000028872,EE0007944,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000028874,EE0007944,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000028908,EE0007953,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000028956,EE0007966,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000029008,EE0007980,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000029014,EE0007981,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000029021,EE0007983,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000029033,EE0007986,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000029046,EE0007988,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000029084,EE0008000,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000029117,EE0008007,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000029156,EE0008017,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000029181,EE0008024,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000029219,EE0008034,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000029223,EE0008035,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000029265,EE0008045,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000029267,EE0008046,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000029275,EE0008048,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000029283,EE0008050,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000029299,EE0008054,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000029301,EE0008054,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000029303,EE0008055,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000029335,EE0008062,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000029378,EE0008073,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000029433,EE0008091,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000029447,EE0008096,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000029452,EE0008099,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000029463,EE0008103,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000029498,EE0008111,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000029533,EE0008119,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000029537,EE0008120,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000029559,EE0008126,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000029626,EE0008143,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000029632,EE0008146,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000029639,EE0008147,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000029666,EE0008155,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000029675,EE0008157,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000029728,EE0008174,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000029771,EE0008184,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000029785,EE0008187,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000029794,EE0008189,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000029804,EE0008193,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000029830,EE0008203,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000029849,EE0008207,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000029858,EE0008211,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000029902,EE0008224,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000029975,EE0008246,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000029983,EE0008248,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000029989,EE0008249,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000030013,EE0008254,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000030084,EE0008275,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000030126,EE0008285,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000030148,EE0008292,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000030159,EE0008295,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000030166,EE0008296,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000030214,EE0008308,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000030264,EE0008320,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000030295,EE0008331,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000030307,EE0008334,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000030369,EE0008354,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000030373,EE0008357,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000030381,EE0008359,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000030424,EE0008372,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000030448,EE0008379,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000030518,EE0008399,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000030534,EE0008403,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000030546,EE0008406,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000030578,EE0008413,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000030601,EE0008421,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000030645,EE0008433,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000030652,EE0008436,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000030678,EE0008444,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000030712,EE0008451,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000030772,EE0008471,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000030802,EE0008481,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000030857,EE0008498,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000030867,EE0008501,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000030874,EE0008503,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000030879,EE0008504,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000030897,EE0008508,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000030935,EE0008517,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000030940,EE0008518,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000031008,EE0008536,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000031014,EE0008539,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000031020,EE0008540,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000031041,EE0008547,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000031044,EE0008547,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000031080,EE0008558,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000031088,EE0008560,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000031124,EE0008569,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000031149,EE0008575,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000031150,EE0008575,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000031193,EE0008586,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000031220,EE0008594,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000031276,EE0008610,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000031304,EE0008619,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000031326,EE0008625,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000031363,EE0008636,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000031390,EE0008642,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000031393,EE0008643,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000031419,EE0008649,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000031453,EE0008657,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000031458,EE0008658,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000031460,EE0008658,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000031470,EE0008662,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000031474,EE0008663,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000031502,EE0008670,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000031528,EE0008677,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000031530,EE0008677,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000031538,EE0008679,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000031542,EE0008681,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000031574,EE0008689,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000031620,EE0008700,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000031639,EE0008706,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000031641,EE0008707,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000031642,EE0008707,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000031661,EE0008711,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000031733,EE0008731,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000031801,EE0008748,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000031810,EE0008750,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000031823,EE0008753,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000031828,EE0008754,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000031831,EE0008755,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000031850,EE0008759,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000031856,EE0008761,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000031909,EE0008773,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000031925,EE0008780,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000031983,EE0008795,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000032004,EE0008800,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000032020,EE0008804,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000032022,EE0008804,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000032043,EE0008809,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000032049,EE0008812,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000032068,EE0008816,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000032094,EE0008823,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000032135,EE0008834,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000032137,EE0008834,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000032164,EE0008844,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000032167,EE0008844,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000032175,EE0008846,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000032246,EE0008869,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000032262,EE0008874,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000032314,EE0008888,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000032316,EE0008889,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000032337,EE0008894,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000032346,EE0008897,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000032366,EE0008901,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000032374,EE0008903,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000032379,EE0008904,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000032398,EE0008909,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000032412,EE0008912,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000032414,EE0008912,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000032423,EE0008915,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000032431,EE0008917,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000032433,EE0008917,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000032495,EE0008933,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000032518,EE0008939,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000032547,EE0008948,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000032585,EE0008958,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000032589,EE0008959,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000032602,EE0008964,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000032616,EE0008968,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000032626,EE0008970,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000032641,EE0008974,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000032681,EE0008986,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000032709,EE0008992,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000032740,EE0009001,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000032745,EE0009002,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000032754,EE0009004,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000032803,EE0009018,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000032826,EE0009024,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000032827,EE0009024,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000032835,EE0009025,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000032839,EE0009026,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000032855,EE0009030,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000032877,EE0009036,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000032884,EE0009038,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000032890,EE0009039,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000032893,EE0009040,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000032895,EE0009040,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000032959,EE0009055,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000032961,EE0009055,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000032973,EE0009058,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000032987,EE0009062,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000033009,EE0009068,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000033014,EE0009070,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000033022,EE0009071,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000033033,EE0009074,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000033053,EE0009080,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000033088,EE0009089,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000033104,EE0009094,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000033145,EE0009104,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000033148,EE0009105,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000033192,EE0009115,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000033207,EE0009118,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000033278,EE0009137,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000033291,EE0009141,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000033301,EE0009143,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000033315,EE0009147,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000033321,EE0009149,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000033337,EE0009154,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000033343,EE0009155,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000033353,EE0009157,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000033389,EE0009166,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000033442,EE0009179,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000033447,EE0009180,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000033461,EE0009184,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000033480,EE0009191,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000033485,EE0009192,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000033489,EE0009193,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000033490,EE0009193,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000033534,EE0009204,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000033544,EE0009207,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000033568,EE0009215,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000033575,EE0009220,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000033678,EE0009245,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000033681,EE0009246,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000033682,EE0009246,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000033695,EE0009249,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000033706,EE0009252,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000033755,EE0009263,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000033769,EE0009266,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000033797,EE0009273,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000033921,EE0009306,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000033945,EE0009312,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000033952,EE0009316,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000033953,EE0009316,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000033976,EE0009324,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000033982,EE0009325,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000033992,EE0009329,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000034008,EE0009333,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000034110,EE0009363,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000034133,EE0009371,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000034136,EE0009372,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000034145,EE0009374,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000034183,EE0009387,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000034228,EE0009400,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000034233,EE0009402,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000034248,EE0009405,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000034276,EE0009413,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000034281,EE0009414,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000034306,EE0009422,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000034332,EE0009429,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000034404,EE0009451,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000034456,EE0009464,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000034464,EE0009467,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000034485,EE0009472,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000034512,EE0009480,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000034514,EE0009481,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000034521,EE0009484,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000034529,EE0009486,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000034536,EE0009490,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000034576,EE0009499,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000034580,EE0009500,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000034587,EE0009502,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000034664,EE0009521,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000034714,EE0009534,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000034724,EE0009537,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000034782,EE0009552,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000034918,EE0009593,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000034945,EE0009602,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000034960,EE0009605,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000034972,EE0009609,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000035016,EE0009619,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000035040,EE0009625,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000035108,EE0009643,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000035157,EE0009657,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000035173,EE0009661,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000035176,EE0009662,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000035179,EE0009663,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000035198,EE0009670,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000035211,EE0009673,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000035246,EE0009681,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000035281,EE0009688,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000035304,EE0009694,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000035330,EE0009702,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000035376,EE0009714,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000035381,EE0009715,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000035401,EE0009720,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000035403,EE0009721,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000035426,EE0009726,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000035495,EE0009747,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000035505,EE0009752,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000035576,EE0009771,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000035590,EE0009776,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000035625,EE0009785,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000035665,EE0009795,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000035679,EE0009799,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000035689,EE0009803,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000035690,EE0009803,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000035704,EE0009807,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000035709,EE0009809,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000035722,EE0009811,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000035728,EE0009814,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000035734,EE0009815,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000035791,EE0009831,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000035821,EE0009842,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000035825,EE0009843,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000035829,EE0009844,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000035852,EE0009849,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000035860,EE0009850,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000035863,EE0009851,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000035870,EE0009853,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000035924,EE0009870,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000035936,EE0009873,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000035993,EE0009887,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000036056,EE0009904,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000036059,EE0009905,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000036073,EE0009908,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000036092,EE0009915,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000036095,EE0009916,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000036108,EE0009919,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000036142,EE0009928,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000036149,EE0009930,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000036176,EE0009940,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000036177,EE0009940,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000036183,EE0009941,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000036184,EE0009942,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000036199,EE0009945,DUPLICATE_ACTIVE_ELIGIBILITY,Medium,Multiple active eligibility rows may cause billing or claims-processing errors.
+ENR000036200,EE0009945,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000036224,EE0009953,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000036259,EE0009963,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000036263,EE0009964,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000036285,EE0009971,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000036293,EE0009974,PLAN_MISMATCH,High,Approved plan differs from the employer election.
+ENR000036301,EE0009976,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000036312,EE0009980,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000036370,EE0009995,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000036375,EE0009996,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+ENR000036387,EE0009998,MISSING_ELIGIBILITY,High,Requested coverage was not established.
+ENR000036393,EE0009999,DELAYED_ELIGIBILITY_START,High,Eligibility begins after the requested coverage date.
+,UNKNOWN000001,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000002,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000003,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000004,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000005,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000006,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000007,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000008,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000009,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000010,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000011,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000012,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000013,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000014,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000015,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000016,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000017,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000018,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000019,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000020,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000021,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000022,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000023,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000024,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000025,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000026,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000027,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000028,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000029,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000030,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000031,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000032,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000033,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000034,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000035,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000036,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000037,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000038,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000039,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000040,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000041,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000042,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000043,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000044,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000045,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000046,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000047,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000048,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000049,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000050,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000051,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000052,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000053,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000054,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000055,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000056,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000057,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000058,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000059,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000060,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000061,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000062,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000063,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000064,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000065,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000066,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000067,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000068,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000069,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000070,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000071,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.
+,UNKNOWN000072,UNKNOWN_EMPLOYEE,Critical,Eligibility exists for a member absent from the employee population.

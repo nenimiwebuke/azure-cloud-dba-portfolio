@@ -1,0 +1,6 @@
+employer_id,employer_name,industry,state,contract_start_date,contract_end_date,account_status,expected_file_frequency,source_system,last_updated_timestamp
+EMP1001,Acme Manufacturing,Manufacturing,OH,2023-01-01,,Active,Weekly,Workday,2026-07-01T08:00:00Z
+EMP1002,Northstar Logistics,Transportation,TX,2022-06-15,,Active,Daily,UKG,2026-07-01T08:00:00Z
+EMP1003,Blue Horizon Health,Healthcare,NC,2021-03-01,,Active,Weekly,Oracle HCM,2026-07-01T08:00:00Z
+EMP1004,Pioneer Retail Group,Retail,FL,2024-02-01,,Active,Biweekly,Workday,2026-07-01T08:00:00Z
+EMP1005,Atlas Financial Services,Finance,NY,2020-09-01,,Active,Monthly,SAP SuccessFactors,2026-07-01T08:00:00Z

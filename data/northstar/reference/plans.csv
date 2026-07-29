@@ -1,0 +1,20 @@
+plan_id,plan_name,plan_type,coverage_tier,monthly_premium,deductible,effective_date,termination_date,plan_status
+PLN-MED-001,Northstar Standard Medical PPO,Medical,Employee,485.00,1500.00,2025-01-01,,Active
+PLN-MED-002,Northstar Standard Medical PPO,Medical,Employee+Spouse,835.00,1500.00,2025-01-01,,Active
+PLN-MED-003,Northstar Standard Medical PPO,Medical,Employee+Children,790.00,1500.00,2025-01-01,,Active
+PLN-MED-004,Northstar Standard Medical PPO,Medical,Family,1125.00,1500.00,2025-01-01,,Active
+PLN-MED-005,Northstar High Deductible Health Plan,Medical,Employee,325.00,3200.00,2025-01-01,,Active
+PLN-MED-006,Northstar High Deductible Health Plan,Medical,Employee+Spouse,590.00,3200.00,2025-01-01,,Active
+PLN-MED-007,Northstar High Deductible Health Plan,Medical,Employee+Children,545.00,3200.00,2025-01-01,,Active
+PLN-MED-008,Northstar High Deductible Health Plan,Medical,Family,825.00,3200.00,2025-01-01,,Active
+PLN-DEN-001,Northstar Dental Plus,Dental,Employee,38.00,50.00,2025-01-01,,Active
+PLN-DEN-002,Northstar Dental Plus,Dental,Employee+Spouse,71.00,50.00,2025-01-01,,Active
+PLN-DEN-003,Northstar Dental Plus,Dental,Employee+Children,68.00,50.00,2025-01-01,,Active
+PLN-DEN-004,Northstar Dental Plus,Dental,Family,104.00,50.00,2025-01-01,,Active
+PLN-VIS-001,Northstar Vision Essential,Vision,Employee,12.00,0.00,2025-01-01,,Active
+PLN-VIS-002,Northstar Vision Essential,Vision,Employee+Spouse,21.00,0.00,2025-01-01,,Active
+PLN-VIS-003,Northstar Vision Essential,Vision,Employee+Children,20.00,0.00,2025-01-01,,Active
+PLN-VIS-004,Northstar Vision Essential,Vision,Family,31.00,0.00,2025-01-01,,Active
+PLN-LIF-001,Employer Basic Life,Life,Employee,0.00,0.00,2025-01-01,,Active
+PLN-DIS-001,Short-Term Disability,Disability,Employee,24.00,0.00,2025-01-01,,Active
+PLN-MED-LEGACY-001,Legacy Medical HMO,Medical,Employee,275.00,750.00,2022-01-01,2024-12-31,Retired
