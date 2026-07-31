@@ -22,6 +22,7 @@ from pathlib import Path
 
 from pyspark.sql import DataFrame
 from pyspark.sql import functions as F
+from pyspark.sql.types import StringType, StructField
 
 # Databricks Repos normally adds the repository root to sys.path. This fallback
 # also supports execution from other working directories.
@@ -34,7 +35,11 @@ for candidate in [Path.cwd(), *Path.cwd().parents]:
 
 from notebooks.common.audit import add_audit_columns
 from notebooks.common.contracts import EMPLOYEE_SCHEMA
-from notebooks.common.metrics import print_summary
+from notebooks.common.metrics import (
+    calculate_data_quality_score,
+    create_pipeline_metric_df,
+    print_summary,
+)
 from notebooks.common.paths import PATHS
 from notebooks.common.validation import (
     add_employee_validation_errors,
@@ -55,9 +60,13 @@ BATCH_ID = dbutils.widgets.get("batch_id")
 SOURCE_SYSTEM = dbutils.widgets.get("source_system")
 WRITE_MODE = dbutils.widgets.get("write_mode")
 
+PIPELINE_NAME = "northstar_bronze_to_silver_employees"
+NOTEBOOK_VERSION = "1.0.0"
+
 SOURCE_PATH = PATHS.employees_bronze
 SILVER_PATH = PATHS.employees_silver
 QUARANTINE_PATH = PATHS.employees_quarantine
+METRICS_PATH = PATHS.data_quality_metrics_gold
 
 print(f"Business date:     {BUSINESS_DATE}")
 print(f"Batch ID:          {BATCH_ID}")
@@ -76,9 +85,13 @@ def read_bronze_employees(path: str) -> DataFrame:
     them. The corrupt-record column can be routed to quarantine.
     """
 
+    bronze_schema = EMPLOYEE_SCHEMA.add(
+        StructField("_corrupt_record", StringType(), nullable=True)
+    )
+
     return (
         spark.read.format("csv")
-        .schema(EMPLOYEE_SCHEMA)
+        .schema(bronze_schema)
         .option("header", "true")
         .option("mode", "PERMISSIVE")
         .option("columnNameOfCorruptRecord", "_corrupt_record")
@@ -113,9 +126,25 @@ normalized_df = (
 
 # COMMAND ----------
 
-validated_df = add_employee_validation_errors(
-    normalized_df,
-    as_of_date=BUSINESS_DATE,
+validated_df = (
+    add_employee_validation_errors(
+        normalized_df,
+        as_of_date=BUSINESS_DATE,
+    )
+    .withColumn(
+        "validation_errors",
+        F.when(
+            F.col("_corrupt_record").isNotNull(),
+            F.array_union(
+                F.col("validation_errors"),
+                F.array(F.lit("MALFORMED_SOURCE_RECORD")),
+            ),
+        ).otherwise(F.col("validation_errors")),
+    )
+    .withColumn(
+        "is_valid",
+        F.size(F.col("validation_errors")) == 0,
+    )
 )
 
 valid_df, quarantine_df = split_valid_and_quarantine(validated_df)
@@ -206,10 +235,16 @@ quarantine_output_df = (
 
 # COMMAND ----------
 
+data_quality_score = calculate_data_quality_score(
+    records_read,
+    quarantine_count,
+)
+
 print_summary(
     records_read=records_read,
     records_written=valid_count,
     rejected_records=quarantine_count,
+    data_quality_score=data_quality_score,
 )
 
 print("\nVALIDATION FAILURE COUNTS")
@@ -245,9 +280,33 @@ if quarantine_written_count != quarantine_count:
         f"actual={quarantine_written_count:,}"
     )
 
+metric_df = create_pipeline_metric_df(
+    spark,
+    pipeline_name=PIPELINE_NAME,
+    notebook_version=NOTEBOOK_VERSION,
+    batch_id=BATCH_ID,
+    business_date=BUSINESS_DATE,
+    source_system=SOURCE_SYSTEM,
+    source_path=SOURCE_PATH,
+    target_path=SILVER_PATH,
+    records_read=records_read,
+    records_written=silver_written_count,
+    records_rejected=quarantine_written_count,
+    run_status="SUCCEEDED",
+)
+
+(
+    metric_df.write.format("delta")
+    .mode("append")
+    .save(METRICS_PATH)
+)
+
 print("\nEmployee Bronze-to-Silver processing completed successfully.")
+print(f"Notebook version: {NOTEBOOK_VERSION}")
 print(f"Silver rows:      {silver_written_count:,}")
 print(f"Quarantine rows:  {quarantine_written_count:,}")
+print(f"Quality score:    {data_quality_score:.2f}%")
+print(f"Metrics path:     {METRICS_PATH}")
 
 valid_df.unpersist()
 quarantine_df.unpersist()
