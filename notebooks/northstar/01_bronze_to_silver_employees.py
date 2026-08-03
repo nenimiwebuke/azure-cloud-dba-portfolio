@@ -22,7 +22,7 @@ from pathlib import Path
 
 from pyspark.sql import DataFrame
 from pyspark.sql import functions as F
-from pyspark.sql.types import StringType, StructField
+from pyspark.sql.types import StringType, StructField, StructType
 
 # Databricks Repos normally adds the repository root to sys.path. This fallback
 # also supports execution from other working directories.
@@ -45,6 +45,11 @@ from notebooks.common.validation import (
     add_employee_validation_errors,
     split_valid_and_quarantine,
 )
+import importlib
+import notebooks.common.audit as audit_module
+
+importlib.reload(audit_module)
+add_audit_columns = audit_module.add_audit_columns
 
 # COMMAND ----------
 
@@ -85,8 +90,15 @@ def read_bronze_employees(path: str) -> DataFrame:
     them. The corrupt-record column can be routed to quarantine.
     """
 
-    bronze_schema = EMPLOYEE_SCHEMA.add(
-        StructField("_corrupt_record", StringType(), nullable=True)
+    bronze_schema = StructType(
+        [
+            field
+            for field in EMPLOYEE_SCHEMA.fields
+            if field.name != "_corrupt_record"
+        ]
+        + [
+            StructField("_corrupt_record", StringType(), nullable=True)
+        ]
     )
 
     return (
@@ -97,6 +109,10 @@ def read_bronze_employees(path: str) -> DataFrame:
         .option("columnNameOfCorruptRecord", "_corrupt_record")
         .option("dateFormat", "yyyy-MM-dd")
         .load(path)
+        .select(
+            "*",
+            F.col("_metadata.file_path").alias("_source_file_path"),
+        )
     )
 
 
@@ -126,6 +142,7 @@ normalized_df = (
 
 # COMMAND ----------
 
+# DBTITLE 1,Cell 6
 validated_df = (
     add_employee_validation_errors(
         normalized_df,
@@ -150,8 +167,8 @@ validated_df = (
 valid_df, quarantine_df = split_valid_and_quarantine(validated_df)
 
 # Cache because both DataFrames are counted and written.
-valid_df = valid_df.cache()
-quarantine_df = quarantine_df.cache()
+#valid_df = valid_df.cache()
+#quarantine_df = quarantine_df.cache()
 
 valid_count = valid_df.count()
 quarantine_count = quarantine_df.count()
@@ -308,5 +325,4 @@ print(f"Quarantine rows:  {quarantine_written_count:,}")
 print(f"Quality score:    {data_quality_score:.2f}%")
 print(f"Metrics path:     {METRICS_PATH}")
 
-valid_df.unpersist()
-quarantine_df.unpersist()
+# DataFrames are not cached on Serverless compute, so no unpersist is required.
