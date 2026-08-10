@@ -1,0 +1,10 @@
+# Generated ML datasets
+outputs/*.csv
+
+# Trained model artifacts
+models/*.joblib
+models/*.pkl
+
+# Python cache
+__pycache__/
+*.pyc
