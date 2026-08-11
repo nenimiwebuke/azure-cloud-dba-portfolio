@@ -23,7 +23,8 @@ The organization requires a centralized Azure platform capable of supporting:
 - Monitoring and operational visibility
 - Governed analytical data products
 - Repeatable deployment across environments
-- Future CI/CD, machine learning, and AI capabilities
+- Machine learning and predictive risk scoring
+- Future CI/CD and expanded AI capabilities
 
 The solution is designed as an **application landing zone** that would operate within a broader enterprise Azure environment. It focuses on the infrastructure and services normally owned by a data platform engineering team rather than attempting to reproduce an entire organization-wide Azure landing zone in a personal subscription.
 
@@ -69,7 +70,7 @@ The target platform follows a layered data architecture:
 │                  Consumption & Data Products                 │
 │                                                              │
 │       Azure SQL │ Databricks SQL │ BI / Reporting           │
-│       Machine Learning / Azure AI — future phases           │
+│       Machine Learning │ Predictive Risk Scoring            │
 └──────────────────────────────────────────────────────────────┘
 ```
 
@@ -238,6 +239,103 @@ These workloads demonstrate concepts including:
 The retail workload provides one practical example of a business workload running on the broader platform rather than defining the entire purpose of the repository.
 
 ---
+## Machine Learning & Predictive Risk Scoring
+
+The Northstar workload extends the enterprise data platform beyond descriptive analytics by introducing a machine-learning layer for eligibility reconciliation risk prioritization.
+
+The objective is to determine whether information available before reconciliation can help operations teams prioritize enrollment records that are more likely to produce downstream eligibility exceptions.
+
+### End-to-End Flow
+
+```text
+Northstar Source Data
+        │
+        ▼
+ADLS Bronze
+Raw enrollment, employee, dependent,
+and eligibility data
+        │
+        ▼
+Databricks Silver
+Validated, standardized, deduplicated,
+and conformed records
+        │
+        ▼
+Gold Reconciliation
+Business-ready eligibility reconciliation
+and analytical datasets
+        │
+        ▼
+ML Feature Engineering
+Leakage-safe pre-reconciliation features
+        │
+        ▼
+Model Training & Evaluation
+Logistic Regression + Random Forest
+        │
+        ▼
+Persisted Model
+Reusable scikit-learn pipeline
+        │
+        ▼
+Operational Scoring
+Relative exception-risk ranking
+        │
+        ▼
+Prioritized Review Queue
+HIGH / MEDIUM / LOW
+        │
+        ▼
+Power BI / Operations
+
+```
+
+### ML Pipeline
+
+The implementation is separated into three stages:
+
+- [`01_build_training_dataset.py`](ml/northstar/01_build_training_dataset.py) — constructs the enrollment-level training dataset and engineers leakage-safe features.
+- [`02_train_exception_model.py`](ml/northstar/02_train_exception_model.py) — trains and compares classifiers, evaluates model performance, measures prioritization lift, and persists the selected model.
+- [`03_score_enrollments.py`](ml/northstar/03_score_enrollments.py) — independently loads the trained model and produces a ranked operational review queue.
+
+Detailed implementation notes are available in the [`Northstar ML README`](ml/northstar/README.md).
+
+### Model Evaluation
+
+The training dataset contains 36,397 enrollment records with a 4.77% exception rate.
+
+Two classifiers were evaluated using the same leakage-safe train/test split:
+
+| Model | ROC-AUC | Exception Recall | Exception Precision | Exception F1 |
+|---|---:|---:|---:|---:|
+| Logistic Regression | 0.5376 | 45.82% | 5.33% | 9.54% |
+| Random Forest | 0.5191 | 29.68% | 5.55% | 9.35% |
+
+Logistic Regression was retained for the scoring proof-of-concept because it provided stronger recall, F1, and ROC-AUC for the exception class.
+
+### Operational Prioritization
+
+Model output is treated as a **relative risk ranking**, not as a calibrated probability of failure.
+
+The operational queue assigns:
+
+- **HIGH** — top 10% of scored records
+- **MEDIUM** — next 20%
+- **LOW** — remaining 70%
+
+On the held-out test set, the HIGH tier captured **14.12% of known exceptions while representing only 10% of records**, producing a **1.41x lift over the baseline exception rate**.
+
+The HIGH + MEDIUM population captured **35.45% of exceptions within 30% of records**, producing a **1.18x lift**.
+
+### Engineering Interpretation
+
+The experiment demonstrates modest prioritization value but limited overall predictive strength from the currently available pre-reconciliation features.
+
+The ML component is therefore presented as a **proof-of-concept**, not a production-ready prediction system.
+
+A production implementation would require richer historical and operational signals such as prior reconciliation history, employer submission behavior, plan-change history, processing latency, file-quality metrics, and historical exception frequency.
+
+---
 
 ## Architecture Decision Records
 
@@ -301,6 +399,13 @@ azure-cloud-dba-portfolio/
 │   ├── 01_ADLS_Bronze_Silver_Gold_Pipeline.py
 │   ├── 02_Retail_Sales_Bronze_Silver_Gold.py
 │   └── 03_SQL_Analytics_Gold_Data.sql
+|
+├── ml/
+│   └── northstar/
+│       ├── README.md
+│       ├── 01_build_training_dataset.py
+│       ├── 02_train_exception_model.py
+│       └── 03_score_enrollments.py
 │
 ├── screenshots/
 ├── scripts/
@@ -405,7 +510,7 @@ The platform is being developed around several core engineering principles:
 - Environment approvals and controlled promotion
 - Operational alerts and runbooks
 - BI consumption layer
-- Future machine learning and Azure AI workloads
+- Expanded machine learning and Azure AI workloads
 
 ---
 
