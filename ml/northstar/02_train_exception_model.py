@@ -1,4 +1,5 @@
 import pandas as pd
+import joblib
 
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.compose import ColumnTransformer
@@ -136,6 +137,23 @@ pipeline = Pipeline(
 # ---------------------------------------------------------
 
 pipeline.fit(X_train, y_train)
+
+# ---------------------------------------------------------
+# Save selected model
+# ---------------------------------------------------------
+
+MODEL_FILE = (
+    "ml/northstar/outputs/"
+    "eligibility_exception_model.joblib"
+)
+
+joblib.dump(
+    pipeline,
+    MODEL_FILE,
+)
+
+print("\nSelected model saved to:")
+print(MODEL_FILE)
 
 print("\nModel training complete.")
 

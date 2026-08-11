@@ -1,9 +1,9 @@
-# Generated ML datasets
+# Generated ML datasets and scoring outputs
 outputs/*.csv
 
-# Trained model artifacts
-models/*.joblib
-models/*.pkl
+# Generated trained model artifacts
+outputs/*.joblib
+outputs/*.pkl
 
 # Python cache
 __pycache__/
