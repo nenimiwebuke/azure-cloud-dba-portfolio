@@ -1,5 +1,6 @@
 import pandas as pd
 
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.compose import ColumnTransformer
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import (
@@ -165,6 +166,62 @@ print(
         roc_auc_score(
             y_test,
             y_prob,
+        ),
+        4,
+    ),
+)
+
+# ---------------------------------------------------------
+# Random Forest classifier
+# ---------------------------------------------------------
+
+rf_model = RandomForestClassifier(
+    n_estimators=300,
+    max_depth=12,
+    min_samples_leaf=5,
+    class_weight="balanced",
+    random_state=42,
+    n_jobs=-1,
+)
+
+rf_pipeline = Pipeline(
+    steps=[
+        ("preprocessor", preprocessor),
+        ("model", rf_model),
+    ]
+)
+
+rf_pipeline.fit(X_train, y_train)
+
+print("\nRandom Forest training complete.")
+
+
+# ---------------------------------------------------------
+# Evaluate Random Forest
+# ---------------------------------------------------------
+
+rf_pred = rf_pipeline.predict(X_test)
+
+rf_prob = rf_pipeline.predict_proba(X_test)[:, 1]
+
+print("\nRandom Forest confusion matrix:")
+print(confusion_matrix(y_test, rf_pred))
+
+print("\nRandom Forest classification report:")
+print(
+    classification_report(
+        y_test,
+        rf_pred,
+        digits=4,
+    )
+)
+
+print(
+    "Random Forest ROC-AUC:",
+    round(
+        roc_auc_score(
+            y_test,
+            rf_prob,
         ),
         4,
     ),
