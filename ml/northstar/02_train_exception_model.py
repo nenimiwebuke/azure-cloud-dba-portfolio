@@ -226,3 +226,200 @@ print(
         4,
     ),
 )
+
+# ---------------------------------------------------------
+# Create operational risk-scoring output
+# ---------------------------------------------------------
+
+risk_results = df.loc[X_test.index, [
+    "enrollment_id",
+    "employee_id",
+    "employer_id",
+    "plan_id",
+    "department",
+    "state",
+    "exception_flag",
+]].copy()
+
+risk_results["exception_probability"] = y_prob
+
+risk_results["risk_score"] = (
+    risk_results["exception_probability"] * 100
+).round(2)
+
+
+# ---------------------------------------------------------
+# Assign relative risk tiers
+# HIGH   = top 10%
+# MEDIUM = next 20%
+# LOW    = remaining 70%
+# ---------------------------------------------------------
+
+high_threshold = risk_results["exception_probability"].quantile(0.90)
+medium_threshold = risk_results["exception_probability"].quantile(0.70)
+
+risk_results["risk_tier"] = "LOW"
+
+risk_results.loc[
+    risk_results["exception_probability"] >= medium_threshold,
+    "risk_tier",
+] = "MEDIUM"
+
+risk_results.loc[
+    risk_results["exception_probability"] >= high_threshold,
+    "risk_tier",
+] = "HIGH"
+
+print("\nRisk tier thresholds:")
+print(f"HIGH threshold: {high_threshold:.4f}")
+print(f"MEDIUM threshold: {medium_threshold:.4f}")
+
+
+# ---------------------------------------------------------
+# Prioritize highest-risk records
+# ---------------------------------------------------------
+
+risk_results = risk_results.sort_values(
+    "exception_probability",
+    ascending=False,
+)
+
+print("\nRisk tier distribution:")
+print(risk_results["risk_tier"].value_counts())
+
+print("\nTop 10 highest-risk enrollments:")
+print(
+    risk_results[
+        [
+            "enrollment_id",
+            "employee_id",
+            "exception_probability",
+            "risk_score",
+            "risk_tier",
+            "exception_flag",
+        ]
+    ]
+    .head(10)
+    .to_string(index=False)
+)
+
+
+# ---------------------------------------------------------
+# Write scored records
+# ---------------------------------------------------------
+
+OUTPUT_FILE = (
+    "ml/northstar/outputs/"
+    "eligibility_exception_risk_scores.csv"
+)
+
+risk_results.to_csv(
+    OUTPUT_FILE,
+    index=False,
+)
+
+print("\nRisk scores written to:")
+print(OUTPUT_FILE)
+
+# ---------------------------------------------------------
+# Evaluate operational prioritization
+# ---------------------------------------------------------
+
+total_exceptions = int(risk_results["exception_flag"].sum())
+
+high_risk = risk_results[
+    risk_results["risk_tier"] == "HIGH"
+]
+
+top_30 = risk_results[
+    risk_results["risk_tier"].isin(["HIGH", "MEDIUM"])
+]
+
+high_exceptions = int(
+    high_risk["exception_flag"].sum()
+)
+
+top_30_exceptions = int(
+    top_30["exception_flag"].sum()
+)
+
+high_capture_rate = (
+    high_exceptions / total_exceptions
+)
+
+top_30_capture_rate = (
+    top_30_exceptions / total_exceptions
+)
+
+overall_exception_rate = (
+    risk_results["exception_flag"].mean()
+)
+
+high_exception_rate = (
+    high_risk["exception_flag"].mean()
+)
+
+top_30_exception_rate = (
+    top_30["exception_flag"].mean()
+)
+
+
+print("\nOperational prioritization evaluation:")
+
+print(
+    f"Total test-set exceptions: "
+    f"{total_exceptions}"
+)
+
+print(
+    f"Exceptions captured in HIGH tier: "
+    f"{high_exceptions} / {total_exceptions} "
+    f"({high_capture_rate:.2%})"
+)
+
+print(
+    f"Exceptions captured in HIGH + MEDIUM tiers: "
+    f"{top_30_exceptions} / {total_exceptions} "
+    f"({top_30_capture_rate:.2%})"
+)
+
+print(
+    f"Overall exception rate: "
+    f"{overall_exception_rate:.2%}"
+)
+
+print(
+    f"HIGH-tier exception rate: "
+    f"{high_exception_rate:.2%}"
+)
+
+print(
+    f"Top-30% exception rate: "
+    f"{top_30_exception_rate:.2%}"
+)
+
+# ---------------------------------------------------------
+# Calculate prioritization lift
+# ---------------------------------------------------------
+
+high_lift = (
+    high_exception_rate
+    / overall_exception_rate
+)
+
+top_30_lift = (
+    top_30_exception_rate
+    / overall_exception_rate
+)
+
+print("\nPrioritization lift:")
+
+print(
+    f"HIGH-tier lift vs baseline: "
+    f"{high_lift:.2f}x"
+)
+
+print(
+    f"Top-30% lift vs baseline: "
+    f"{top_30_lift:.2f}x"
+)
