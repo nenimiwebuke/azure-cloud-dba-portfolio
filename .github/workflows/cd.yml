@@ -28,6 +28,18 @@ jobs:
           tenant-id: 6cbb4a2d-3ca5-4d86-b4e5-a2a01b2d7787
           subscription-id: 4cef5174-3663-46bd-9870-d117cf748336
 
+      - name: Load SQL admin password from Key Vault
+        id: sql-secret
+        run: |
+          SQL_ADMIN_PASSWORD=$(az keyvault secret show \
+            --vault-name kv-nenim-cloud-dba-dev \
+            --name sql-admin-password \
+            --query value \
+            -o tsv)
+
+          echo "::add-mask::$SQL_ADMIN_PASSWORD"
+          echo "TF_VAR_sql_admin_password=$SQL_ADMIN_PASSWORD" >> "$GITHUB_ENV"
+
       - name: Terraform initialize
         working-directory: terraform
         env:
