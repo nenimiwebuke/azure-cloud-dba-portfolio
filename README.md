@@ -477,6 +477,11 @@ The platform is being developed around several core engineering principles:
 - Architecture documentation
 - Architecture Decision Records
 - Naming and tagging standards
+- GitHub Actions continuous integration
+- Automated Python syntax validation for Northstar ML workloads
+- Automated Terraform formatting validation
+- Automated Terraform initialization without remote backend access
+- Automated Terraform configuration validation
 
 ### In Progress
 
@@ -503,8 +508,7 @@ The platform is being developed around several core engineering principles:
 - Private connectivity where appropriate
 - Azure resource diagnostic settings
 - Data-quality and freshness monitoring
-- CI/CD with GitHub Actions
-- Terraform validation and security scanning in CI
+- Terraform security scanning in CI
 - Python linting and automated testing
 - OpenID Connect authentication for Azure deployments
 - Environment approvals and controlled promotion
@@ -513,6 +517,25 @@ The platform is being developed around several core engineering principles:
 - Expanded machine learning and Azure AI workloads
 
 ---
+
+## CI/CD
+
+Continuous integration is implemented with GitHub Actions through `.github/workflows/ci.yml`.
+
+The workflow runs automatically on pushes and pull requests targeting `main`.
+
+Current CI validation includes:
+
+- Python 3.12 environment setup
+- Dependency installation for Northstar ML workloads
+- Python syntax compilation checks for the Northstar ML scripts
+- Terraform formatting validation with `terraform fmt -check -recursive`
+- Terraform initialization with the remote backend disabled
+- Terraform configuration validation with `terraform validate`
+
+The current workflow provides CI validation only. Automated Azure deployment is intentionally not enabled.
+
+The next phase will introduce controlled continuous delivery using Azure OpenID Connect authentication, Terraform plan/apply separation, and environment approval controls.
 
 ## Terraform Workflow
 
