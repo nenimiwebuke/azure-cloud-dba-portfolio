@@ -21,10 +21,12 @@ jobs:
         with:
           terraform_version: "1.15.8"
 
-      - name: Azure authentication
-        run: |
-          echo "Azure OIDC authentication is not enabled yet."
-          echo "CD remains intentionally non-deploying until the Entra workload identity is configured."
+      - name: Azure login with OIDC
+        uses: azure/login@v2
+        with:
+          client-id: 3fbc905a-9d77-4c86-a9e0-068b7c362f0c
+          tenant-id: 6cbb4a2d-3ca5-4d86-b4e5-a2a01b2d7787
+          subscription-id: 4cef5174-3663-46bd-9870-d117cf748336
 
       - name: Deployment status
         run: |
