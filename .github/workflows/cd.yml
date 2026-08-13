@@ -1,0 +1,32 @@
+name: Portfolio CD
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  terraform-plan:
+    name: Terraform Plan
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Set up Terraform
+        uses: hashicorp/setup-terraform@v4
+        with:
+          terraform_version: "1.15.8"
+
+      - name: Azure authentication
+        run: |
+          echo "Azure OIDC authentication is not enabled yet."
+          echo "CD remains intentionally non-deploying until the Entra workload identity is configured."
+
+      - name: Deployment status
+        run: |
+          echo "Terraform plan/apply is intentionally disabled."
+          echo "No Azure resources will be modified by this workflow."
