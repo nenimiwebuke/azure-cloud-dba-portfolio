@@ -28,7 +28,22 @@ jobs:
           tenant-id: 6cbb4a2d-3ca5-4d86-b4e5-a2a01b2d7787
           subscription-id: 4cef5174-3663-46bd-9870-d117cf748336
 
-      - name: Deployment status
-        run: |
-          echo "Terraform plan/apply is intentionally disabled."
-          echo "No Azure resources will be modified by this workflow."
+      - name: Terraform initialize
+        working-directory: terraform
+        env:
+          ARM_USE_OIDC: "true"
+          ARM_USE_AZUREAD: "true"
+          ARM_CLIENT_ID: 3fbc905a-9d77-4c86-a9e0-068b7c362f0c
+          ARM_TENANT_ID: 6cbb4a2d-3ca5-4d86-b4e5-a2a01b2d7787
+          ARM_SUBSCRIPTION_ID: 4cef5174-3663-46bd-9870-d117cf748336
+        run: terraform init
+
+      - name: Terraform plan
+        working-directory: terraform
+        env:
+          ARM_USE_OIDC: "true"
+          ARM_USE_AZUREAD: "true"
+          ARM_CLIENT_ID: 3fbc905a-9d77-4c86-a9e0-068b7c362f0c
+          ARM_TENANT_ID: 6cbb4a2d-3ca5-4d86-b4e5-a2a01b2d7787
+          ARM_SUBSCRIPTION_ID: 4cef5174-3663-46bd-9870-d117cf748336
+        run: terraform plan -input=false
