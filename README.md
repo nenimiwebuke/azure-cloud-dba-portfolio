@@ -603,6 +603,25 @@ The evolution is intentionally visible in the Git history and documentation.
 
 ---
 
+## Power BI Executive Analytics
+
+The **Northstar Workforce & Eligibility Executive Dashboard** provides an executive-level view of workforce distribution, employee activity, and eligibility reconciliation across the synthetic Northstar Benefits Group dataset.
+
+The dashboard highlights:
+
+- 10,000 total employees and 8,227 active employees
+- 82.27% workforce coverage eligibility
+- 17.73% termination rate
+- Employee distribution by department and state
+- Eligibility reconciliation with a 97.09% match rate
+- Executive-level workforce insights for operational decision-making
+
+![Northstar Workforce & Eligibility Executive Dashboard](powerbi/screenshots/northstar-workforce-executive-dashboard.png)
+
+The Power BI report demonstrates the analytical consumption layer of the platform, transforming curated enterprise data into business-facing KPIs and visual insights.
+
+---
+
 ## Roadmap
 
 The next phases of the project will focus on:
