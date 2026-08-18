@@ -500,7 +500,6 @@ The platform is being developed around several core engineering principles:
 - Delta Lake expansion
 - Unity Catalog governance
 - Metadata-driven ingestion
-- Full and incremental loading patterns
 - Retry and failure handling
 - Audit logging and row-count reconciliation
 - Managed identities
@@ -600,6 +599,25 @@ The project now demonstrates not only how individual Azure services are deployed
 - Version control
 
 The evolution is intentionally visible in the Git history and documentation.
+
+---
+
+## Northstar Incremental Processing
+
+The Northstar employee pipeline implements an incremental processing pattern using a persisted watermark and Delta Lake `MERGE`.
+
+The implementation demonstrates:
+
+- Watermark-based filtering of newly arrived employee records
+- Incremental processing without rebuilding the full Silver dataset
+- Delta Lake `MERGE` semantics for inserts and updates
+- Persistent watermark advancement after successful processing
+- Idempotent reruns that prevent duplicate inserts
+- Validation of updated and newly inserted employee records
+
+The implementation is available in [`08_incremental_employee_merge.ipynb`](notebooks/northstar/08_incremental_employee_merge.ipynb).
+
+During validation, a 10,000-row Silver employee dataset received an incremental batch containing two updates and two new employees. The resulting Silver dataset contained 10,002 rows, and the persisted watermark advanced to the latest successfully processed source timestamp.
 
 ---
 
