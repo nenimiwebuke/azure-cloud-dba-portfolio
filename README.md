@@ -24,7 +24,7 @@ The organization requires a centralized Azure platform capable of supporting:
 - Governed analytical data products
 - Repeatable deployment across environments
 - Machine learning and predictive risk scoring
-- Future CI/CD and expanded AI capabilities
+- Controlled CI/CD and future expanded AI capabilities
 
 The solution is designed as an **application landing zone** that would operate within a broader enterprise Azure environment. It focuses on the infrastructure and services normally owned by a data platform engineering team rather than attempting to reproduce an entire organization-wide Azure landing zone in a personal subscription.
 
@@ -62,7 +62,7 @@ The target platform follows a layered data architecture:
 │                   Processing & Governance                    │
 │                                                              │
 │        Azure Databricks │ PySpark │ Spark SQL               │
-│        Delta Lake / Unity Catalog — planned expansion       │
+│        Delta Lake │ Unity Catalog                           │
 └──────────────────────────────┬───────────────────────────────┘
                                │
                                ▼
@@ -469,50 +469,52 @@ The platform is being developed around several core engineering principles:
 - Azure Key Vault
 - Azure Log Analytics workspace
 - Terraform remote state in Azure Storage
-- Modular Terraform for major platform components
+- Modular Terraform for major platform components, including Azure Databricks
 - State-preserving Terraform refactoring using `moved` blocks
 - Common resource tagging structure
-- PySpark Medallion transformation examples
-- Spark SQL analytics example
+- PySpark Medallion transformations and Spark SQL analytics
+- Delta Lake processing
+- Gold table registration in Unity Catalog
+- Northstar Bronze-to-Silver-to-Gold data engineering workflows
+- Watermark-based incremental employee processing with Delta Lake `MERGE`
+- Persisted incremental-processing watermark and idempotent rerun behavior
+- Northstar machine-learning risk-prioritization proof of concept
+- Power BI executive analytics dashboard
 - Architecture documentation
 - Architecture Decision Records
 - Naming and tagging standards
 - GitHub Actions continuous integration
+- GitHub Actions continuous-delivery planning workflow
+- Azure OpenID Connect authentication for GitHub Actions
+- User-assigned managed identity for deployment authentication
+- Azure Key Vault secret retrieval during CD execution
+- Remote Terraform plan execution against Azure
 - Automated Python syntax validation for Northstar ML workloads
 - Automated Terraform formatting validation
-- Automated Terraform initialization without remote backend access
+- Automated Terraform initialization without remote backend access in CI
 - Automated Terraform configuration validation
 
 ### In Progress
 
-- Remaining Terraform modularization and refinement
-- Azure Databricks Terraform module
-- Data Factory pipeline implementation
-- Databricks processing expansion
 - Data-quality controls
 - Security hardening
 - Monitoring and diagnostic integration
 - Environment separation
+- Controlled Terraform apply and environment approval workflow
 
 ### Planned
 
 - Landing and Quarantine layers
-- Delta Lake expansion
-- Unity Catalog governance
 - Metadata-driven ingestion
 - Retry and failure handling
 - Audit logging and row-count reconciliation
-- Managed identities
 - Expanded Azure RBAC
 - Private connectivity where appropriate
 - Azure resource diagnostic settings
 - Data-quality and freshness monitoring
 - Terraform security scanning in CI
 - Python linting and automated testing
-- OpenID Connect authentication for Azure deployments
-- Environment approvals and controlled promotion
 - Operational alerts and runbooks
-- BI consumption layer
 - Expanded machine learning and Azure AI workloads
 
 ---
@@ -532,9 +534,11 @@ Current CI validation includes:
 - Terraform initialization with the remote backend disabled
 - Terraform configuration validation with `terraform validate`
 
-The current workflow provides CI validation only. Automated Azure deployment is intentionally not enabled.
+A continuous-delivery foundation is implemented through `.github/workflows/cd.yml` as a manually triggered Terraform planning workflow.
 
-The next phase will introduce controlled continuous delivery using Azure OpenID Connect authentication, Terraform plan/apply separation, and environment approval controls.
+The CD workflow uses Azure OpenID Connect federation with a user-assigned managed identity, retrieves the SQL administrator password from Azure Key Vault, initializes the remote Terraform backend, refreshes Azure resource state, and executes a real Terraform plan against the deployed environment.
+
+The validated CD workflow currently stops at `terraform plan`. Automatic `terraform apply` is intentionally not enabled. A future controlled promotion stage can introduce GitHub Environment approvals and an explicitly approved apply step.
 
 ## Terraform Workflow
 
@@ -642,18 +646,18 @@ The Power BI report demonstrates the analytical consumption layer of the platfor
 
 ## Roadmap
 
-The next phases of the project will focus on:
+Future expansion of the project can focus on:
 
-1. Complete Terraform modularization, including Azure Databricks.
-2. Expand Azure Data Factory orchestration.
-3. Build more complete ingestion workflows.
-4. Expand Databricks and PySpark processing.
-5. Introduce Delta Lake capabilities.
-6. Add data-quality and quarantine patterns.
-7. Strengthen identity, RBAC, secrets, and network security.
-8. Integrate diagnostics, Log Analytics, and operational alerting.
-9. Introduce CI/CD with GitHub Actions.
-10. Add analytical consumption and future AI-oriented workloads.
+1. Expand Azure Data Factory orchestration and metadata-driven ingestion.
+2. Add Landing and Quarantine processing patterns.
+3. Add data-quality, freshness, row-count, and reconciliation controls.
+4. Strengthen RBAC, private connectivity, and network security.
+5. Expand Azure resource diagnostics, Log Analytics, and operational alerting.
+6. Add retry, failure-handling, and operational runbook patterns.
+7. Add Terraform security scanning, Python linting, and automated testing.
+8. Introduce approval-gated Terraform apply and controlled environment promotion.
+9. Expand Unity Catalog governance and environment separation.
+10. Extend the analytical and machine-learning workloads toward future Azure AI use cases.
 
 ---
 
