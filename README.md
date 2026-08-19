@@ -454,20 +454,40 @@ The documentation describes platform scope, logical architecture, naming convent
 
 ```text
 azure-cloud-dba-portfolio/
-├── data/
-│   ├── employees.csv
-│   └── sales.csv
+├── .github/
+│   └── workflows/
+│       ├── ci.yml
+│       └── cd.yml
 │
 ├── docs/
 │   ├── adr/
 │   ├── architecture/
+│   ├── data-contracts/
 │   └── diagrams/
 │
 ├── notebooks/
-│   ├── 01_ADLS_Bronze_Silver_Gold_Pipeline.py
-│   ├── 02_Retail_Sales_Bronze_Silver_Gold.py
-│   └── 03_SQL_Analytics_Gold_Data.sql
-|
+│   ├── common/
+│   │   ├── audit.py
+│   │   ├── contracts.py
+│   │   ├── metrics.py
+│   │   ├── paths.py
+│   │   └── validation.py
+│   │
+│   ├── northstar/
+│   │   ├── 01_bronze_to_silver_employees.py
+│   │   ├── 02_bronze_to_silver_dependents.ipynb
+│   │   ├── 03_bronze_to_silver_enrollments.ipynb
+│   │   ├── 04_bronze_to_silver_eligibility.ipynb
+│   │   ├── 05_silver_to_gold_employees.ipynb
+│   │   ├── 06_gold_eligibility_reconciliation.ipynb
+│   │   ├── 07_register_gold_tables.ipynb
+│   │   └── 08_incremental_employee_merge.ipynb
+│   │
+│   └── archive/
+│       ├── 01_ADLS_Bronze_Silver_Gold_Pipeline.py
+│       ├── 02_Retail_Sales_Bronze_Silver_Gold.py
+│       └── 03_SQL_Analytics_Gold_Data.sql
+│
 ├── ml/
 │   └── northstar/
 │       ├── README.md
@@ -475,24 +495,42 @@ azure-cloud-dba-portfolio/
 │       ├── 02_train_exception_model.py
 │       └── 03_score_enrollments.py
 │
-├── screenshots/
+├── powerbi/
+│   ├── Northstar_Executive_Analytics.pbix
+│   └── screenshots/
+│       └── northstar-workforce-executive-dashboard.png
+│
 ├── scripts/
+│   └── generate_northstar_data.py
 │
 ├── terraform/
-│   └── modules/
-│       ├── azure-sql/
-│       ├── data-factory/
-│       ├── data-lake/
-│       ├── key-vault/
-│       ├── log-analytics/
-│       ├── networking/
-│       ├── resource-group/
-│       └── storage-account/
+│   ├── modules/
+│   │   ├── azure-sql/
+│   │   ├── databricks/
+│   │   ├── data-factory/
+│   │   ├── data-lake/
+│   │   ├── key-vault/
+│   │   ├── log-analytics/
+│   │   ├── networking/
+│   │   ├── resource-group/
+│   │   └── storage-account/
+│   ├── databricks-storage-access.tf
+│   ├── main.tf
+│   ├── outputs.tf
+│   └── variables.tf
+│
+├── data/
+│   ├── employees.csv
+│   └── sales.csv
 │
 ├── .gitignore
 ├── LICENSE
 └── README.md
 ```
+
+The repository is organized around the Northstar data-engineering workload, with reusable notebook utilities, documented data contracts, analytical and machine-learning consumers, and the supporting Azure infrastructure maintained alongside the workload code.
+
+The original retail and introductory Medallion examples are retained under `notebooks/archive/` to preserve the project evolution while keeping the Northstar implementation as the primary engineering reference.
 
 ---
 
