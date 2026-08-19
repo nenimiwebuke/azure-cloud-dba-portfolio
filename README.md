@@ -1,8 +1,10 @@
-# Azure Cloud DBA & Enterprise Data Platform Portfolio
+# Azure Data Engineering & Cloud Data Platform Portfolio
 
-A production-oriented Azure data platform demonstrating cloud database engineering, data engineering, Infrastructure as Code (IaC), security, observability, and enterprise architecture practices.
+A production-oriented Azure data engineering portfolio demonstrating end-to-end ingestion, PySpark transformation, Delta Lake Medallion processing, incremental data pipelines, analytical data products, machine learning, and cloud infrastructure automation.
 
-This repository is a hands-on portfolio project demonstrating how an Azure workload can be designed, provisioned, documented, and progressively evolved using engineering practices that extend beyond a tutorial or one-off deployment.
+The implementation combines Azure Databricks, Azure Data Lake Storage Gen2, Azure Data Factory, Azure SQL, Power BI, Terraform, GitHub Actions, Key Vault, and Azure identity services to demonstrate how reliable enterprise data workloads can be engineered and operated in the cloud.
+
+The project also incorporates database engineering, Infrastructure as Code (IaC), security, observability, and CI/CD practices to demonstrate the operational depth required to run data platforms reliably beyond the notebook layer.
 
 The reference implementation uses a fictional organization, **Northstar Benefits Group**, and synthetic data only. No employer-owned, customer, patient, member, or other production data is stored in this repository.
 
@@ -12,21 +14,25 @@ The reference implementation uses a fictional organization, **Northstar Benefits
 
 Northstar Benefits Group represents an enterprise benefits organization that processes data from operational databases, employee and eligibility systems, claims and provider systems, enrollment files, partner-delivered files, and other sources.
 
-The organization requires a centralized Azure platform capable of supporting:
+The organization requires a centralized Azure data platform capable of supporting:
 
-- Repeatable infrastructure deployment
-- Secure storage of operational and analytical data
 - Batch data ingestion and orchestration
-- Medallion data transformation
-- Cloud database workloads
-- Secrets management
-- Monitoring and operational visibility
+- Bronze, Silver, and Gold Medallion transformations
+- Incremental data processing using persisted watermarks and Delta Lake `MERGE`
 - Governed analytical data products
-- Repeatable deployment across environments
+- Data-quality and reconciliation workflows
+- Power BI analytical consumption
 - Machine learning and predictive risk scoring
-- Controlled CI/CD and future expanded AI capabilities
+- Secure operational and analytical data storage
+- Cloud database workloads
+- Secrets and identity management
+- Monitoring and operational visibility
+- Repeatable infrastructure deployment
+- CI/CD and a foundation for controlled environment promotion
 
-The solution is designed as an **application landing zone** that would operate within a broader enterprise Azure environment. It focuses on the infrastructure and services normally owned by a data platform engineering team rather than attempting to reproduce an entire organization-wide Azure landing zone in a personal subscription.
+The Northstar implementation models an enterprise data-engineering workload in which operational and file-based source data is ingested into Azure, transformed through Medallion layers, incrementally maintained, and exposed to analytical and machine-learning consumers.
+
+The supporting Azure infrastructure is managed as code and incorporates database engineering, security, identity, monitoring, and deployment practices required to operate the workload reliably.
 
 ---
 
@@ -96,90 +102,6 @@ Detailed architecture documentation is available under [`docs/architecture`](doc
 
 ---
 
-## Infrastructure as Code
-
-Azure infrastructure is managed using **Terraform**.
-
-The project originally contained Azure resources directly in the root Terraform configuration. The infrastructure is being progressively refactored into reusable child modules while preserving the existing deployed Azure resources.
-
-Terraform `moved` blocks are used during refactoring to change resource addresses without destroying and recreating the underlying Azure resources.
-
-For example, a resource originally managed at a root address such as:
-
-```text
-azurerm_virtual_network.portfolio_vnet
-```
-
-can be moved to:
-
-```text
-module.networking.azurerm_virtual_network.this
-```
-
-while Terraform continues managing the same Azure resource.
-
-This allows structural improvements to the codebase to be separated from functional infrastructure changes.
-
-### Current Terraform Modules
-
-```text
-terraform/modules/
-├── azure-sql/
-├── data-factory/
-├── data-lake/
-├── key-vault/
-├── log-analytics/
-├── networking/
-├── resource-group/
-└── storage-account/
-```
-
-Each module follows a consistent structure:
-
-```text
-module/
-├── main.tf
-├── variables.tf
-├── outputs.tf
-└── versions.tf
-```
-
-The modules provide defined inputs and outputs, isolate infrastructure responsibilities, and prepare the platform for reusable environment deployments.
-
----
-
-## Terraform Remote State
-
-Terraform state is stored remotely in Azure Storage rather than relying on a workstation-local state file.
-
-The remote backend provides a centralized source of truth for Terraform-managed infrastructure and allows the same environment to be administered from different workstations or Azure Cloud Shell.
-
-The backend uses a dedicated Terraform state resource group, storage account, container, and state object separate from the workload resources being managed.
-
-Sensitive values are not intended to be committed to source control.
-
----
-
-## Azure Services
-
-| Service | Responsibility |
-|---|---|
-| Azure Resource Group | Workload resource boundary |
-| Azure Virtual Network | Network foundation |
-| Azure Subnet | Workload network segmentation |
-| Network Security Group | Network traffic controls |
-| Azure Public IP | Public network endpoint for applicable lab resources |
-| Azure Network Interface | Network interface for applicable compute workloads |
-| Azure Storage | General-purpose object storage |
-| Azure Data Lake Storage Gen2 | Medallion data lake |
-| Azure Data Factory | Data ingestion and orchestration |
-| Azure Databricks | Distributed data processing |
-| Azure SQL Database | Relational database workload |
-| Azure Key Vault | Secrets-management foundation |
-| Azure Log Analytics | Centralized monitoring foundation |
-
----
-
 ## Medallion Architecture
 
 The data-engineering design progressively refines data through logical processing layers.
@@ -208,37 +130,76 @@ Bronze, Silver, and Gold storage are currently represented in the Azure Data Lak
 
 ---
 
-## Data Engineering Examples
+## Northstar Data Engineering Implementation
 
-The repository contains synthetic datasets for demonstrating data-engineering patterns:
+**Northstar Benefits Group** is the primary end-to-end data-engineering workload implemented in this repository.
+
+The synthetic workload models enterprise workforce, enrollment, dependent, and eligibility data moving through Azure Data Lake Storage and Databricks using a Medallion architecture.
+
+The implementation demonstrates:
+
+- Bronze ingestion of source-aligned enterprise datasets
+- PySpark-based validation, standardization, and transformation
+- Silver conformed datasets for employees, dependents, enrollments, and eligibility
+- Data-quality validation and reconciliation patterns
+- Gold analytical datasets for downstream consumption
+- Delta Lake persistence and table management
+- Unity Catalog registration of curated Gold datasets
+- Incremental employee processing using a persisted watermark and Delta Lake `MERGE`
+- Idempotent processing that prevents duplicate inserts during reruns
+- Analytical consumption through Power BI
+- Machine-learning feature engineering and operational risk prioritization
+
+Northstar operates on synthetic datasets at a scale intended to demonstrate more realistic data-engineering behavior, including a 10,000-row employee population and more than 36,000 enrollment records.
+
+Implementation notebooks are maintained under:
 
 ```text
-data/
-├── employees.csv
-└── sales.csv
+notebooks/northstar/
 ```
 
-Current notebooks include:
-
-```text
-notebooks/
-├── 01_ADLS_Bronze_Silver_Gold_Pipeline.py
-├── 02_Retail_Sales_Bronze_Silver_Gold.py
-└── 03_SQL_Analytics_Gold_Data.sql
-```
-
-These workloads demonstrate concepts including:
-
-- Bronze-to-Silver-to-Gold processing
-- PySpark transformations
-- Data cleaning and standardization
-- Analytical aggregation
-- Spark SQL
-- Analytics-ready Gold data
-
-The retail workload provides one practical example of a business workload running on the broader platform rather than defining the entire purpose of the repository.
+The repository also retains earlier foundational examples covering ADLS Medallion processing, retail transformations, and Spark SQL analytics. These examples document the progression of the project but are secondary to the Northstar enterprise workload.
 
 ---
+
+## Northstar Incremental Processing
+
+The Northstar employee pipeline implements an incremental processing pattern using a persisted watermark and Delta Lake `MERGE`.
+
+The implementation demonstrates:
+
+- Watermark-based filtering of newly arrived employee records
+- Incremental processing without rebuilding the full Silver dataset
+- Delta Lake `MERGE` semantics for inserts and updates
+- Persistent watermark advancement after successful processing
+- Idempotent reruns that prevent duplicate inserts
+- Validation of updated and newly inserted employee records
+
+The implementation is available in [`08_incremental_employee_merge.ipynb`](notebooks/northstar/08_incremental_employee_merge.ipynb).
+
+During validation, a 10,000-row Silver employee dataset received an incremental batch containing two updates and two new employees. The resulting Silver dataset contained 10,002 rows, and the persisted watermark advanced to the latest successfully processed source timestamp.
+
+---
+
+## Power BI Executive Analytics
+
+The **Northstar Workforce & Eligibility Executive Dashboard** provides an executive-level view of workforce distribution, employee activity, and eligibility reconciliation across the synthetic Northstar Benefits Group dataset.
+
+The dashboard highlights:
+
+- 10,000 total employees and 8,227 active employees
+- 82.27% workforce coverage eligibility
+- 17.73% termination rate
+- Employee distribution by department and state
+- Eligibility reconciliation with a 97.09% match rate
+- Executive-level workforce insights for operational decision-making
+
+![Northstar Workforce & Eligibility Executive Dashboard](powerbi/screenshots/northstar-workforce-executive-dashboard.png)
+
+The Power BI report demonstrates the analytical consumption layer of the platform, transforming curated enterprise data into business-facing KPIs and visual insights.
+
+---
+
 ## Machine Learning & Predictive Risk Scoring
 
 The Northstar workload extends the enterprise data platform beyond descriptive analytics by introducing a machine-learning layer for eligibility reconciliation risk prioritization.
@@ -334,6 +295,113 @@ The experiment demonstrates modest prioritization value but limited overall pred
 The ML component is therefore presented as a **proof-of-concept**, not a production-ready prediction system.
 
 A production implementation would require richer historical and operational signals such as prior reconciliation history, employer submission behavior, plan-change history, processing latency, file-quality metrics, and historical exception frequency.
+
+---
+
+## Infrastructure as Code
+
+Azure infrastructure is managed using **Terraform**.
+
+The project originally contained Azure resources directly in the root Terraform configuration. The infrastructure is being progressively refactored into reusable child modules while preserving the existing deployed Azure resources.
+
+Terraform `moved` blocks are used during refactoring to change resource addresses without destroying and recreating the underlying Azure resources.
+
+For example, a resource originally managed at a root address such as:
+
+```text
+azurerm_virtual_network.portfolio_vnet
+```
+
+can be moved to:
+
+```text
+module.networking.azurerm_virtual_network.this
+```
+
+while Terraform continues managing the same Azure resource.
+
+This allows structural improvements to the codebase to be separated from functional infrastructure changes.
+
+### Current Terraform Modules
+
+```text
+terraform/modules/
+├── azure-sql/
+├── data-factory/
+├── data-lake/
+├── key-vault/
+├── log-analytics/
+├── networking/
+├── resource-group/
+└── storage-account/
+```
+
+Each module follows a consistent structure:
+
+```text
+module/
+├── main.tf
+├── variables.tf
+├── outputs.tf
+└── versions.tf
+```
+
+The modules provide defined inputs and outputs, isolate infrastructure responsibilities, and prepare the platform for reusable environment deployments.
+
+---
+
+## Terraform Remote State
+
+Terraform state is stored remotely in Azure Storage rather than relying on a workstation-local state file.
+
+The remote backend provides a centralized source of truth for Terraform-managed infrastructure and allows the same environment to be administered from different workstations or Azure Cloud Shell.
+
+The backend uses a dedicated Terraform state resource group, storage account, container, and state object separate from the workload resources being managed.
+
+Sensitive values are not intended to be committed to source control.
+
+---
+
+## Azure Services
+
+| Service | Responsibility |
+|---|---|
+| Azure Resource Group | Workload resource boundary |
+| Azure Virtual Network | Network foundation |
+| Azure Subnet | Workload network segmentation |
+| Network Security Group | Network traffic controls |
+| Azure Public IP | Public network endpoint for applicable lab resources |
+| Azure Network Interface | Network interface for applicable compute workloads |
+| Azure Storage | General-purpose object storage |
+| Azure Data Lake Storage Gen2 | Medallion data lake |
+| Azure Data Factory | Data ingestion and orchestration |
+| Azure Databricks | Distributed data processing |
+| Azure SQL Database | Relational database workload |
+| Azure Key Vault | Secrets-management foundation |
+| Azure Log Analytics | Centralized monitoring foundation |
+
+---
+
+## CI/CD
+
+Continuous integration is implemented with GitHub Actions through `.github/workflows/ci.yml`.
+
+The workflow runs automatically on pushes and pull requests targeting `main`.
+
+Current CI validation includes:
+
+- Python 3.12 environment setup
+- Dependency installation for Northstar ML workloads
+- Python syntax compilation checks for the Northstar ML scripts
+- Terraform formatting validation with `terraform fmt -check -recursive`
+- Terraform initialization with the remote backend disabled
+- Terraform configuration validation with `terraform validate`
+
+A continuous-delivery foundation is implemented through `.github/workflows/cd.yml` as a manually triggered Terraform planning workflow.
+
+The CD workflow uses Azure OpenID Connect federation with a user-assigned managed identity, retrieves the SQL administrator password from Azure Key Vault, initializes the remote Terraform backend, refreshes Azure resource state, and executes a real Terraform plan against the deployed environment.
+
+The validated CD workflow currently stops at `terraform plan`. Automatic `terraform apply` is intentionally not enabled. A future controlled promotion stage can introduce GitHub Environment approvals and an explicitly approved apply step.
 
 ---
 
@@ -519,27 +587,6 @@ The platform is being developed around several core engineering principles:
 
 ---
 
-## CI/CD
-
-Continuous integration is implemented with GitHub Actions through `.github/workflows/ci.yml`.
-
-The workflow runs automatically on pushes and pull requests targeting `main`.
-
-Current CI validation includes:
-
-- Python 3.12 environment setup
-- Dependency installation for Northstar ML workloads
-- Python syntax compilation checks for the Northstar ML scripts
-- Terraform formatting validation with `terraform fmt -check -recursive`
-- Terraform initialization with the remote backend disabled
-- Terraform configuration validation with `terraform validate`
-
-A continuous-delivery foundation is implemented through `.github/workflows/cd.yml` as a manually triggered Terraform planning workflow.
-
-The CD workflow uses Azure OpenID Connect federation with a user-assigned managed identity, retrieves the SQL administrator password from Azure Key Vault, initializes the remote Terraform backend, refreshes Azure resource state, and executes a real Terraform plan against the deployed environment.
-
-The validated CD workflow currently stops at `terraform plan`. Automatic `terraform apply` is intentionally not enabled. A future controlled promotion stage can introduce GitHub Environment approvals and an explicitly approved apply step.
-
 ## Terraform Workflow
 
 A typical Terraform workflow for the project is:
@@ -603,44 +650,6 @@ The project now demonstrates not only how individual Azure services are deployed
 - Version control
 
 The evolution is intentionally visible in the Git history and documentation.
-
----
-
-## Northstar Incremental Processing
-
-The Northstar employee pipeline implements an incremental processing pattern using a persisted watermark and Delta Lake `MERGE`.
-
-The implementation demonstrates:
-
-- Watermark-based filtering of newly arrived employee records
-- Incremental processing without rebuilding the full Silver dataset
-- Delta Lake `MERGE` semantics for inserts and updates
-- Persistent watermark advancement after successful processing
-- Idempotent reruns that prevent duplicate inserts
-- Validation of updated and newly inserted employee records
-
-The implementation is available in [`08_incremental_employee_merge.ipynb`](notebooks/northstar/08_incremental_employee_merge.ipynb).
-
-During validation, a 10,000-row Silver employee dataset received an incremental batch containing two updates and two new employees. The resulting Silver dataset contained 10,002 rows, and the persisted watermark advanced to the latest successfully processed source timestamp.
-
----
-
-## Power BI Executive Analytics
-
-The **Northstar Workforce & Eligibility Executive Dashboard** provides an executive-level view of workforce distribution, employee activity, and eligibility reconciliation across the synthetic Northstar Benefits Group dataset.
-
-The dashboard highlights:
-
-- 10,000 total employees and 8,227 active employees
-- 82.27% workforce coverage eligibility
-- 17.73% termination rate
-- Employee distribution by department and state
-- Eligibility reconciliation with a 97.09% match rate
-- Executive-level workforce insights for operational decision-making
-
-![Northstar Workforce & Eligibility Executive Dashboard](powerbi/screenshots/northstar-workforce-executive-dashboard.png)
-
-The Power BI report demonstrates the analytical consumption layer of the platform, transforming curated enterprise data into business-facing KPIs and visual insights.
 
 ---
 
