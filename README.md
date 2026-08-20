@@ -38,67 +38,19 @@ The supporting Azure infrastructure is managed as code and incorporates database
 
 ## Architecture
 
-The target platform follows a layered data architecture:
+The Northstar implementation follows an end-to-end Azure data-engineering architecture spanning source ingestion, Medallion processing, incremental data maintenance, analytics, machine learning, governance, and cloud infrastructure automation.
 
-```text
-┌──────────────────────────────────────────────────────────────┐
-│                       Source Systems                         │
-│                                                              │
-│  SQL Server │ Azure SQL │ CSV/JSON │ Partner Files │ APIs   │
-└──────────────────────────────┬───────────────────────────────┘
-                               │
-                               ▼
-┌──────────────────────────────────────────────────────────────┐
-│                    Ingestion & Orchestration                 │
-│                                                              │
-│                    Azure Data Factory                        │
-└──────────────────────────────┬───────────────────────────────┘
-                               │
-                               ▼
-┌──────────────────────────────────────────────────────────────┐
-│                      Data Lake Storage                       │
-│                                                              │
-│                    Azure Data Lake Gen2                      │
-│                                                              │
-│       Landing │ Bronze │ Silver │ Gold │ Quarantine         │
-└──────────────────────────────┬───────────────────────────────┘
-                               │
-                               ▼
-┌──────────────────────────────────────────────────────────────┐
-│                   Processing & Governance                    │
-│                                                              │
-│        Azure Databricks │ PySpark │ Spark SQL               │
-│        Delta Lake │ Unity Catalog                           │
-└──────────────────────────────┬───────────────────────────────┘
-                               │
-                               ▼
-┌──────────────────────────────────────────────────────────────┐
-│                  Consumption & Data Products                 │
-│                                                              │
-│       Azure SQL │ Databricks SQL │ BI / Reporting           │
-│       Machine Learning │ Predictive Risk Scoring            │
-└──────────────────────────────────────────────────────────────┘
-```
+![Northstar Data Engineering Platform on Azure](docs/diagrams/northstar-data-engineering-architecture.png)
 
-Supporting infrastructure includes:
+The architecture highlights the implemented data flow from operational and file-based source systems through Azure Data Factory, Azure Data Lake Storage Gen2, and Azure Databricks into curated analytical and machine-learning outputs.
 
-```text
-Terraform
-   │
-   ├── Resource Group
-   ├── Networking
-   ├── General Storage
-   ├── ADLS Gen2
-   ├── Azure SQL
-   ├── Azure Data Factory
-   ├── Azure Databricks
-   ├── Azure Key Vault
-   └── Log Analytics
-```
+The diagram also distinguishes implemented capabilities from target-state enhancements. Current delivery automation stops at a validated Terraform `plan`; approval-gated `terraform apply` and automated infrastructure promotion remain future-state capabilities.
 
-The architecture is progressively being implemented and hardened as the project evolves.
+Cross-cutting platform services include Azure SQL Database, Key Vault, Microsoft Entra ID, Unity Catalog, Log Analytics, Azure Storage, Terraform, and GitHub Actions.
 
-Detailed architecture documentation is available under [`docs/architecture`](docs/architecture).
+Northstar Benefits Group is fictional, and all data represented in the architecture is synthetic and generated for portfolio and demonstration purposes.
+
+Detailed architecture documentation is available under [`docs/architecture`](docs/architecture), with editable source diagrams maintained under [`docs/diagrams`](docs/diagrams).
 
 ---
 
