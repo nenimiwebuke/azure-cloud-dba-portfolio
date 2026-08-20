@@ -281,6 +281,7 @@ This allows structural improvements to the codebase to be separated from functio
 ```text
 terraform/modules/
 ├── azure-sql/
+├── databricks/
 ├── data-factory/
 ├── data-lake/
 ├── key-vault/
@@ -445,7 +446,8 @@ azure-cloud-dba-portfolio/
 │   │   ├── 05_silver_to_gold_employees.ipynb
 │   │   ├── 06_gold_eligibility_reconciliation.ipynb
 │   │   ├── 07_register_gold_tables.ipynb
-│   │   └── 08_incremental_employee_merge.ipynb
+│   │   ├── 08_incremental_employee_merge.ipynb
+│   │   └── 09_northstar_pipeline_validation.ipynb
 │   │
 │   └── archive/
 │       ├── 01_ADLS_Bronze_Silver_Gold_Pipeline.py
