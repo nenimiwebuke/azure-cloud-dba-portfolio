@@ -8,6 +8,20 @@ The project also incorporates database engineering, Infrastructure as Code (IaC)
 
 The reference implementation uses a fictional organization, **Northstar Benefits Group**, and synthetic data only. No employer-owned, customer, patient, member, or other production data is stored in this repository.
 
+**Workload scale:** ~10K employees · ~36K enrollment records · Bronze → Silver → Gold · incremental Delta Lake `MERGE`
+
+## Contents
+
+- [Business Problem](#business-problem)
+- [Architecture](#architecture)
+- [Northstar Data Engineering Implementation](#northstar-data-engineering-implementation)
+- [Northstar Incremental Processing](#northstar-incremental-processing)
+- [Power BI Executive Analytics](#power-bi-executive-analytics)
+- [Machine Learning & Predictive Risk Scoring](#machine-learning--predictive-risk-scoring)
+- [Infrastructure as Code](#infrastructure-as-code)
+- [CI/CD](#cicd)
+- [Repository Structure](#repository-structure)
+
 ---
 
 ## Business Problem
@@ -486,8 +500,9 @@ azure-cloud-dba-portfolio/
 │   └── variables.tf
 │
 ├── data/
-│   ├── employees.csv
-│   └── sales.csv
+│   └── archive/
+│       ├── employees.csv
+│       └── sales.csv
 │
 ├── .gitignore
 ├── LICENSE
