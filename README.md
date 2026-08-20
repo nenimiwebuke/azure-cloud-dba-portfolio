@@ -353,6 +353,8 @@ Current CI validation includes:
 
 A continuous-delivery foundation is implemented through `.github/workflows/cd.yml` as a manually triggered Terraform planning workflow.
 
+![Northstar CI/CD with GitHub Actions, OIDC, and Terraform](docs/diagrams/northstar-cicd-oidc-terraform.png)
+
 The CD workflow uses Azure OpenID Connect federation with a user-assigned managed identity, retrieves the SQL administrator password from Azure Key Vault, initializes the remote Terraform backend, refreshes Azure resource state, and executes a real Terraform plan against the deployed environment.
 
 The validated CD workflow currently stops at `terraform plan`. Automatic `terraform apply` is intentionally not enabled. A future controlled promotion stage can introduce GitHub Environment approvals and an explicitly approved apply step.
@@ -397,7 +399,10 @@ Architecture diagram source files are maintained under:
 ```text
 docs/diagrams/
 ├── enterprise-data-platform.drawio
-└── enterprise-data-platform-enhanced.drawio
+├── enterprise-data-platform-enhanced.drawio
+├── northstar-data-engineering-architecture.png
+├── northstar-incremental-processing-pattern.png
+└── northstar-cicd-oidc-terraform.png
 ```
 
 The documentation describes platform scope, logical architecture, naming conventions, environment strategy, security direction, data architecture, and target-state capabilities.
@@ -421,7 +426,8 @@ azure-cloud-dba-portfolio/
 │       ├── enterprise-data-platform.drawio
 │       ├── enterprise-data-platform-enhanced.drawio
 │       ├── northstar-data-engineering-architecture.png
-│       └── northstar-incremental-processing-pattern.png
+│       ├── northstar-incremental-processing-pattern.png
+│       └── northstar-cicd-oidc-terraform.png
 │
 ├── notebooks/
 │   ├── common/
