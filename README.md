@@ -118,6 +118,8 @@ The repository also retains earlier foundational examples covering ADLS Medallio
 
 The Northstar employee pipeline implements an incremental processing pattern using a persisted watermark and Delta Lake `MERGE`.
 
+![Northstar Incremental Processing Pattern](docs/diagrams/northstar-incremental-processing-pattern.png)
+
 The implementation demonstrates:
 
 - Watermark-based filtering of newly arrived employee records
@@ -416,6 +418,10 @@ azure-cloud-dba-portfolio/
 │   ├── architecture/
 │   ├── data-contracts/
 │   └── diagrams/
+│       ├── enterprise-data-platform.drawio
+│       ├── enterprise-data-platform-enhanced.drawio
+│       ├── northstar-data-engineering-architecture.png
+│       └── northstar-incremental-processing-pattern.png
 │
 ├── notebooks/
 │   ├── common/
