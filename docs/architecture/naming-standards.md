@@ -6,7 +6,7 @@
 |---|---|
 | Document | Naming and Tagging Standards |
 | Platform | Enterprise Azure Data Platform |
-| Repository | `azure-cloud-dba-portfolio` |
+| Repository | `azure-data-engineering-portfolio` |
 | Status | Active |
 | Owner | Data Platform Engineering |
 | Last Reviewed | 2026-07-20 |
@@ -420,7 +420,7 @@ Tags provide metadata that should not be embedded in resource names.
 | `application` | `enterprise-data-platform` | Identifies the workload |
 | `environment` | `dev` | Identifies deployment environment |
 | `managed_by` | `terraform` | Identifies the management authority |
-| `repository` | `azure-cloud-dba-portfolio` | Links the resource to source control |
+| `repository` | `azure-data-engineering-portfolio` | Links the resource to source control |
 | `business_unit` | `data-platform` | Identifies the logical organization |
 | `cost_center` | `portfolio` | Supports cost attribution |
 | `data_classification` | `internal` | Identifies the expected data sensitivity |
@@ -464,7 +464,7 @@ locals {
     application         = "enterprise-data-platform"
     environment         = var.environment
     managed_by          = "terraform"
-    repository          = "azure-cloud-dba-portfolio"
+    repository          = "azure-data-engineering-portfolio"
     business_unit       = "data-platform"
     cost_center         = "portfolio"
     data_classification = "internal"

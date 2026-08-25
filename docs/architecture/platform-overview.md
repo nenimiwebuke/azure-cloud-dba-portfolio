@@ -6,7 +6,7 @@
 |---|---|
 | Document | Platform Overview |
 | Platform | Enterprise Azure Data Platform |
-| Repository | `azure-cloud-dba-portfolio` |
+| Repository | `azure-data-engineering-portfolio` |
 | Status | Active |
 | Owner | Data Platform Engineering |
 | Infrastructure Standard | Terraform |

@@ -427,7 +427,7 @@ The documentation describes platform scope, logical architecture, naming convent
 ## Repository Structure
 
 ```text
-azure-cloud-dba-portfolio/
+azure-data-engineering-portfolio/
 ├── .github/
 │   └── workflows/
 │       ├── ci.yml
