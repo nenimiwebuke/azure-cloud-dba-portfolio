@@ -31,8 +31,8 @@ locals {
 module "resource_group" {
   source = "./modules/resource-group"
 
-  name     = "rg-cloud-dba-portfolio-dev"
-  location = "East US"
+  name     = var.resource_group_name
+  location = var.location
 
   tags = local.common_tags
 }
@@ -48,13 +48,13 @@ module "networking" {
   resource_group_name = module.resource_group.name
   location            = module.resource_group.location
 
-  vnet_name               = "vnet-cloud-dba-dev"
+  vnet_name               = var.vnet_name
   vnet_address_space      = ["10.0.0.0/16"]
-  subnet_name             = "subnet-cloud-dba-dev"
+  subnet_name             = var.subnet_name
   subnet_address_prefixes = ["10.0.1.0/24"]
-  nsg_name                = "nsg-cloud-dba-dev"
-  public_ip_name          = "pip-cloud-dba-dev"
-  nic_name                = "nic-cloud-dba-dev"
+  nsg_name                = var.nsg_name
+  public_ip_name          = var.public_ip_name
+  nic_name                = var.nic_name
 
   tags = local.common_tags
 }
@@ -95,10 +95,10 @@ module "storage_account" {
   resource_group_name = module.resource_group.name
   location            = module.resource_group.location
 
-  storage_account_name     = "stclouddbaportfolio01"
+  storage_account_name     = var.portfolio_storage_account_name
   account_tier             = "Standard"
   account_replication_type = "LRS"
-  container_name           = "portfolio-data"
+  container_name           = var.portfolio_storage_container_name
   container_access_type    = "private"
 
   # Preserve the current Azure configuration during structural migration.
@@ -120,19 +120,19 @@ module "azure_sql" {
   source = "./modules/azure-sql"
 
   resource_group_name = module.resource_group.name
-  location            = "Central US"
+  location            = var.sql_server_location
 
-  server_name                  = "sql-nenim-portfolio-cus-dev"
+  server_name                  = var.sql_server_name
   server_version               = "12.0"
   administrator_login          = var.sql_admin_login
   administrator_login_password = var.sql_admin_password
 
-  database_name     = "CloudDBAPortfolioDB"
+  database_name     = var.sql_database_name
   database_sku_name = "Basic"
 
-  firewall_rule_name        = "Allow-My-Current-IP"
-  firewall_start_ip_address = "172.56.222.194"
-  firewall_end_ip_address   = "172.56.222.194"
+  firewall_rule_name        = var.sql_firewall_rule_name
+  firewall_start_ip_address = var.sql_firewall_ip
+  firewall_end_ip_address   = var.sql_firewall_ip
 
   # Preserve the current Azure configuration during structural migration.
   tags = {}
@@ -156,7 +156,7 @@ moved {
 module "log_analytics" {
   source = "./modules/log-analytics"
 
-  name                = "law-cloud-dba-dev"
+  name                = var.log_analytics_name
   location            = module.resource_group.location
   resource_group_name = module.resource_group.name
 
@@ -177,7 +177,7 @@ data "azurerm_client_config" "current" {}
 module "key_vault" {
   source = "./modules/key-vault"
 
-  name                = "kv-nenim-cloud-dba-dev"
+  name                = var.key_vault_name
   location            = module.resource_group.location
   resource_group_name = module.resource_group.name
   tenant_id           = data.azurerm_client_config.current.tenant_id
@@ -198,7 +198,7 @@ moved {
 module "data_factory" {
   source = "./modules/data-factory"
 
-  name                = "adf-nenim-cloud-dba-dev"
+  name                = var.data_factory_name
   location            = module.resource_group.location
   resource_group_name = module.resource_group.name
 
@@ -217,15 +217,11 @@ module "data_lake" {
   resource_group_name = module.resource_group.name
   location            = module.resource_group.location
 
-  storage_account_name     = "stnenimadlsdev01"
+  storage_account_name     = var.data_lake_storage_account_name
   account_tier             = "Standard"
   account_replication_type = "LRS"
 
-  containers = [
-    "bronze",
-    "silver",
-    "gold"
-  ]
+  containers = var.data_lake_containers
 
   # Preserve the current configuration during structural migration.
   tags = {}
@@ -254,10 +250,10 @@ moved {
 module "databricks" {
   source = "./modules/databricks"
 
-  name                = "dbw-nenim-cloud-dba-dev"
+  name                = var.databricks_name
   resource_group_name = module.resource_group.name
   location            = module.resource_group.location
-  sku                 = "trial"
+  sku                 = var.databricks_sku
 
   tags = {}
 }

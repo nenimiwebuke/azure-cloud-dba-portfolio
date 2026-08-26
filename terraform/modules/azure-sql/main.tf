@@ -8,6 +8,10 @@ resource "azurerm_mssql_server" "this" {
   administrator_login_password = var.administrator_login_password
 
   tags = var.tags
+
+  lifecycle {
+    ignore_changes = [administrator_login_password]
+  }
 }
 
 resource "azurerm_mssql_database" "this" {

@@ -16,6 +16,11 @@ crash.*.log
 *.tfvars
 *.tfvars.json
 
+# Exception: business-case config under terraform/environments/ holds no
+# secrets by convention (see terraform/environments/northstar.tfvars) —
+# credentials are supplied via TF_VAR_* environment variables instead.
+!terraform/environments/*.tfvars
+
 # Ignore override files as they are usually used to override resources locally and so
 # are not checked in
 override.tf
