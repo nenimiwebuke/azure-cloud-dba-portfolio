@@ -102,3 +102,122 @@ def build_employee_validation_rules(as_of_date: str) -> list[Column]:
             F.lit("DUPLICATE_EMPLOYEE_ID"),
         ),
     ]
+
+
+def build_dependent_validation_rules(as_of_date: str) -> list[Column]:
+    """
+    Build dependent data-contract violation rules.
+
+    Note: this currently checks required-field presence only, matching
+    the notebook's original "basic dependent validation." The full
+    Dependent Data Contract also specifies referential checks (employee_id
+    must exist in Employees) and cross-field checks (child cannot be
+    older than the subscriber) that are not yet implemented here.
+    ``as_of_date`` is accepted for interface consistency with the other
+    build_* functions and for future use once those checks are added.
+    """
+
+    return [
+        F.when(
+            F.col("dependent_id").isNull(),
+            F.lit("MISSING_DEPENDENT_ID"),
+        ),
+        F.when(
+            F.col("employee_id").isNull(),
+            F.lit("MISSING_EMPLOYEE_ID"),
+        ),
+        F.when(
+            F.col("relationship").isNull(),
+            F.lit("MISSING_RELATIONSHIP"),
+        ),
+        F.when(
+            F.col("date_of_birth").isNull(),
+            F.lit("MISSING_DATE_OF_BIRTH"),
+        ),
+        F.when(
+            F.col("_corrupt_record").isNotNull(),
+            F.lit("MALFORMED_SOURCE_RECORD"),
+        ),
+    ]
+
+
+def build_enrollment_validation_rules(as_of_date: str) -> list[Column]:
+    """
+    Build enrollment data-contract violation rules.
+
+    Note: required-field presence only, matching the notebook's
+    original checks. ``as_of_date`` is accepted for interface
+    consistency and future use (e.g. coverage_start_date vs. hire_date).
+    """
+
+    return [
+        F.when(
+            F.col("enrollment_id").isNull(),
+            F.lit("MISSING_ENROLLMENT_ID"),
+        ),
+        F.when(
+            F.col("employee_id").isNull(),
+            F.lit("MISSING_EMPLOYEE_ID"),
+        ),
+        F.when(
+            F.col("employer_id").isNull(),
+            F.lit("MISSING_EMPLOYER_ID"),
+        ),
+        F.when(
+            F.col("plan_id").isNull(),
+            F.lit("MISSING_PLAN_ID"),
+        ),
+        F.when(
+            F.col("coverage_start_date").isNull(),
+            F.lit("MISSING_COVERAGE_START_DATE"),
+        ),
+        F.when(
+            F.col("enrollment_status").isNull(),
+            F.lit("MISSING_ENROLLMENT_STATUS"),
+        ),
+        F.when(
+            F.col("_corrupt_record").isNotNull(),
+            F.lit("MALFORMED_SOURCE_RECORD"),
+        ),
+    ]
+
+
+def build_eligibility_validation_rules(as_of_date: str) -> list[Column]:
+    """
+    Build eligibility data-contract violation rules.
+
+    Note: required-field presence only, matching the notebook's
+    original checks. ``as_of_date`` is accepted for interface
+    consistency and future use.
+    """
+
+    return [
+        F.when(
+            F.col("eligibility_id").isNull(),
+            F.lit("MISSING_ELIGIBILITY_ID"),
+        ),
+        F.when(
+            F.col("employee_id").isNull(),
+            F.lit("MISSING_EMPLOYEE_ID"),
+        ),
+        F.when(
+            F.col("plan_id").isNull(),
+            F.lit("MISSING_PLAN_ID"),
+        ),
+        F.when(
+            F.col("eligibility_start_date").isNull(),
+            F.lit("MISSING_ELIGIBILITY_START_DATE"),
+        ),
+        F.when(
+            F.col("eligibility_status").isNull(),
+            F.lit("MISSING_ELIGIBILITY_STATUS"),
+        ),
+        F.when(
+            F.col("approval_timestamp").isNull(),
+            F.lit("MISSING_APPROVAL_TIMESTAMP"),
+        ),
+        F.when(
+            F.col("_corrupt_record").isNotNull(),
+            F.lit("MALFORMED_SOURCE_RECORD"),
+        ),
+    ]
