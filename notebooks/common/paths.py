@@ -1,8 +1,11 @@
 """
-Centralized storage paths for the Northstar Benefits data platform.
+Centralized, business-case-agnostic storage path builder.
 
-Keeping paths in one module prevents notebooks from duplicating hard-coded
-storage locations and makes future environment changes easier to manage.
+A BusinessCasePaths instance encapsulates the bronze/silver/gold
+root conventions for one business case (e.g. "northstar"). Dataset-
+level path helpers take the dataset name explicitly rather than
+being hardcoded per-column, so this class works unchanged for any
+future business case.
 """
 
 from __future__ import annotations
@@ -11,78 +14,37 @@ from dataclasses import dataclass
 
 
 @dataclass(frozen=True)
-class NorthstarPaths:
-    """Storage paths used by the Northstar Databricks workloads."""
+class BusinessCasePaths:
+    """Storage paths used by a business case's Databricks workloads."""
 
-    storage_account: str = "stnenimadlsdev01"
+    storage_account: str
+    business_case: str
 
     @property
     def bronze_root(self) -> str:
-        return f"abfss://bronze@{self.storage_account}.dfs.core.windows.net/northstar"
+        return f"abfss://bronze@{self.storage_account}.dfs.core.windows.net/{self.business_case}"
 
     @property
     def silver_root(self) -> str:
-        return f"abfss://silver@{self.storage_account}.dfs.core.windows.net/northstar"
+        return f"abfss://silver@{self.storage_account}.dfs.core.windows.net/{self.business_case}"
 
     @property
     def gold_root(self) -> str:
-        return f"abfss://gold@{self.storage_account}.dfs.core.windows.net/northstar"
+        return f"abfss://gold@{self.storage_account}.dfs.core.windows.net/{self.business_case}"
 
-    @property
-    def employees_bronze(self) -> str:
-        return f"{self.bronze_root}/employees/employees_20260701.csv"
+    def bronze_dataset_root(self, dataset: str) -> str:
+        """Directory containing a dataset's raw bronze file drops."""
+        return f"{self.bronze_root}/{dataset}"
 
-    @property
-    def dependents_bronze(self) -> str:
-        return f"{self.bronze_root}/dependents/dependents_20260701.csv"
+    def bronze_file(self, dataset: str, filename: str) -> str:
+        """Path to a specific bronze file drop for a dataset."""
+        return f"{self.bronze_dataset_root(dataset)}/{filename}"
 
-    @property
-    def enrollments_bronze(self) -> str:
-        return f"{self.bronze_root}/enrollments/enrollments_20260701.csv"
+    def silver_path(self, dataset: str) -> str:
+        return f"{self.silver_root}/{dataset}"
 
-    @property
-    def eligibility_bronze(self) -> str:
-        return f"{self.bronze_root}/eligibility/eligibility_20260702.csv"
+    def quarantine_path(self, dataset: str) -> str:
+        return f"{self.silver_root}/quarantine/{dataset}"
 
-    @property
-    def employees_silver(self) -> str:
-        return f"{self.silver_root}/employees"
-
-    @property
-    def dependents_silver(self) -> str:
-        return f"{self.silver_root}/dependents"
-
-    @property
-    def enrollments_silver(self) -> str:
-        return f"{self.silver_root}/enrollments"
-
-    @property
-    def eligibility_silver(self) -> str:
-        return f"{self.silver_root}/eligibility"
-
-    @property
-    def employees_quarantine(self) -> str:
-        return f"{self.silver_root}/quarantine/employees"
-
-    @property
-    def dependents_quarantine(self) -> str:
-        return f"{self.silver_root}/quarantine/dependents"
-
-    @property
-    def enrollments_quarantine(self) -> str:
-        return f"{self.silver_root}/quarantine/enrollments"
-
-    @property
-    def eligibility_quarantine(self) -> str:
-        return f"{self.silver_root}/quarantine/eligibility"
-
-    @property
-    def eligibility_reconciliation_gold(self) -> str:
-        return f"{self.gold_root}/eligibility_reconciliation"
-
-    @property
-    def data_quality_metrics_gold(self) -> str:
-        return f"{self.gold_root}/data_quality_metrics"
-
-
-PATHS = NorthstarPaths()
+    def gold_path(self, table_name: str) -> str:
+        return f"{self.gold_root}/{table_name}"

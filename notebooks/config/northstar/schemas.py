@@ -1,8 +1,8 @@
 """
-PySpark schemas and data-contract constants for Northstar datasets.
+PySpark schemas for Northstar Benefits datasets.
 
-These definitions translate the documented Markdown data contracts into
-machine-enforceable schemas and accepted-value rules.
+These definitions translate the documented Markdown data contracts in
+docs/data-contracts/ into machine-enforceable schemas.
 """
 
 from __future__ import annotations
@@ -31,7 +31,6 @@ EMPLOYEE_SCHEMA = StructType(
     ]
 )
 
-
 DEPENDENT_SCHEMA = StructType(
     [
         StructField("dependent_id", StringType(), nullable=True),
@@ -44,7 +43,6 @@ DEPENDENT_SCHEMA = StructType(
         StructField("dependent_status", StringType(), nullable=True),
     ]
 )
-
 
 ENROLLMENT_SCHEMA = StructType(
     [
@@ -61,7 +59,6 @@ ENROLLMENT_SCHEMA = StructType(
     ]
 )
 
-
 ELIGIBILITY_SCHEMA = StructType(
     [
         StructField("eligibility_id", StringType(), nullable=True),
@@ -74,38 +71,4 @@ ELIGIBILITY_SCHEMA = StructType(
         StructField("approval_timestamp", TimestampType(), nullable=True),
         StructField("source_system", StringType(), nullable=True),
     ]
-)
-
-
-VALID_EMPLOYMENT_STATUSES = ("Active", "Terminated")
-
-VALID_DEPENDENT_RELATIONSHIPS = (
-    "Spouse",
-    "Child",
-    "Domestic Partner",
-)
-
-VALID_DEPENDENT_STATUSES = ("Active", "Terminated")
-
-VALID_ENROLLMENT_STATUSES = (
-    "Active",
-    "Pending",
-    "Cancelled",
-)
-
-VALID_ELIGIBILITY_STATUSES = (
-    "Active",
-    "Pending",
-    "Terminated",
-)
-
-VALID_GENDERS = ("M", "F")
-
-VALID_US_STATE_CODES = (
-    "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA",
-    "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD",
-    "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ",
-    "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC",
-    "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY",
-    "DC",
 )
