@@ -10,7 +10,9 @@ enforce the Employee Data Contract, preserve rejected records in quarantine,
 and write valid employee records to a governed Silver Delta dataset.
 
 The notebook is intentionally deterministic and parameterized so the same
-batch can be replayed safely.
+batch can be replayed safely. It draws its schema, validation rules, and
+paths from notebooks/config/northstar/, so the same shape of notebook can
+be reused for a future business case by swapping the config import.
 """
 
 # COMMAND ----------
@@ -34,44 +36,45 @@ for candidate in [Path.cwd(), *Path.cwd().parents]:
         break
 
 from notebooks.common.audit import add_audit_columns
-from notebooks.common.contracts import EMPLOYEE_SCHEMA
 from notebooks.common.metrics import (
     calculate_data_quality_score,
     create_pipeline_metric_df,
     print_summary,
 )
-from notebooks.common.paths import PATHS
 from notebooks.common.validation import (
-    add_employee_validation_errors,
+    apply_validation_rules,
     split_valid_and_quarantine,
 )
-import importlib
-import notebooks.common.audit as audit_module
-
-importlib.reload(audit_module)
-add_audit_columns = audit_module.add_audit_columns
+from notebooks.config.northstar.paths import PATHS
+from notebooks.config.northstar.schemas import EMPLOYEE_SCHEMA
+from notebooks.config.northstar.validation_rules import (
+    build_employee_validation_rules,
+)
 
 # COMMAND ----------
 
-# Runtime parameters make the notebook reusable for later business dates.
+# Runtime parameters make the notebook reusable for later business dates
+# and later bronze file drops.
 
 dbutils.widgets.text("business_date", "2026-07-01")
 dbutils.widgets.text("batch_id", "northstar-employees-20260701")
 dbutils.widgets.text("source_system", "Employer HR Systems")
+dbutils.widgets.text("bronze_filename", "employees_20260701.csv")
 dbutils.widgets.dropdown("write_mode", "overwrite", ["overwrite", "append"])
 
 BUSINESS_DATE = dbutils.widgets.get("business_date")
 BATCH_ID = dbutils.widgets.get("batch_id")
 SOURCE_SYSTEM = dbutils.widgets.get("source_system")
+BRONZE_FILENAME = dbutils.widgets.get("bronze_filename")
 WRITE_MODE = dbutils.widgets.get("write_mode")
 
 PIPELINE_NAME = "northstar_bronze_to_silver_employees"
-NOTEBOOK_VERSION = "1.0.0"
+NOTEBOOK_VERSION = "1.1.0"
 
-SOURCE_PATH = PATHS.employees_bronze
-SILVER_PATH = PATHS.employees_silver
-QUARANTINE_PATH = PATHS.employees_quarantine
-METRICS_PATH = PATHS.data_quality_metrics_gold
+SOURCE_PATH = PATHS.bronze_file("employees", BRONZE_FILENAME)
+SILVER_PATH = PATHS.silver_path("employees")
+QUARANTINE_PATH = PATHS.quarantine_path("employees")
+METRICS_PATH = PATHS.gold_path("data_quality_metrics")
 
 print(f"Business date:     {BUSINESS_DATE}")
 print(f"Batch ID:          {BATCH_ID}")
@@ -144,9 +147,9 @@ normalized_df = (
 
 # DBTITLE 1,Cell 6
 validated_df = (
-    add_employee_validation_errors(
+    apply_validation_rules(
         normalized_df,
-        as_of_date=BUSINESS_DATE,
+        build_employee_validation_rules(as_of_date=BUSINESS_DATE),
     )
     .withColumn(
         "validation_errors",
