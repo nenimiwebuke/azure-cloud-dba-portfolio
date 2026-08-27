@@ -19,6 +19,7 @@ The reference implementation uses a fictional organization, **Northstar Benefits
 - [Power BI Executive Analytics](#power-bi-executive-analytics)
 - [Machine Learning & Predictive Risk Scoring](#machine-learning--predictive-risk-scoring)
 - [Infrastructure as Code](#infrastructure-as-code)
+- [Reusable Template Pattern](#reusable-template-pattern)
 - [CI/CD](#cicd)
 - [Repository Structure](#repository-structure)
 
@@ -121,7 +122,7 @@ Northstar operates on synthetic datasets at a scale intended to demonstrate more
 Implementation notebooks are maintained under:
 
 ```text
-notebooks/northstar/
+notebooks/business_cases/northstar/
 ```
 
 The repository also retains earlier foundational examples covering ADLS Medallion processing, retail transformations, and Spark SQL analytics. These examples document the progression of the project but are secondary to the Northstar enterprise workload.
@@ -143,7 +144,7 @@ The implementation demonstrates:
 - Idempotent reruns that prevent duplicate inserts
 - Validation of updated and newly inserted employee records
 
-The implementation is available in [`08_incremental_employee_merge.ipynb`](notebooks/northstar/08_incremental_employee_merge.ipynb).
+The implementation is available in [`08_incremental_employee_merge.ipynb`](notebooks/business_cases/northstar/08_incremental_employee_merge.ipynb).
 
 During validation, a 10,000-row Silver employee dataset received an incremental batch containing two updates and two new employees. The resulting Silver dataset contained 10,002 rows, and the persisted watermark advanced to the latest successfully processed source timestamp.
 
@@ -331,6 +332,33 @@ Sensitive values are not intended to be committed to source control.
 
 ---
 
+## Reusable Template Pattern
+
+The Northstar implementation began as a single hard-coded workload and was refactored into a reusable template so that a new business case requires new configuration, not new pipeline code.
+
+Each layer separates business-case-agnostic logic from business-case-specific configuration:
+
+| Layer | Shared / generic code | Business-case-specific config |
+|---|---|---|
+| Notebooks | `notebooks/common/` (audit columns, path construction, the validation-rule engine, metric reporting) | `notebooks/config/<business_case>/` (schemas, accepted values, validation rules, path instantiation) |
+| Terraform | `terraform/main.tf`, `terraform/modules/` (parameterized module calls, no hard-coded resource names) | `terraform/environments/<business_case>.tfvars` (resource names and values for one business case) |
+| Machine learning | `ml/common/paths.py` (`MLPaths`, a local-filesystem path builder mirroring the notebook layer's `BusinessCasePaths`) | `ml/<business_case>/` (feature engineering and model training, which are inherently specific to each business case) |
+
+Each notebook resolves its schema, accepted values, and validation rules through objects built from `notebooks.config.<business_case>`, rather than importing hard-coded values. For example, `01_bronze_to_silver_employees.py` imports `EMPLOYEE_SCHEMA` from `notebooks.config.northstar.schemas` and validates records with `apply_validation_rules(df, build_employee_validation_rules(...))`, where the rule-application engine lives in `notebooks.common.validation` and the actual rules live in `notebooks.config.northstar.validation_rules`.
+
+Terraform's `main.tf` was parameterized so every previously hard-coded resource name (storage accounts, the Databricks workspace, the SQL server, and so on) is sourced from a variable with its current value moved into `terraform/environments/northstar.tfvars`. Running `terraform plan -var-file=environments/northstar.tfvars` against the deployed infrastructure produces `Plan: 0 to add, 0 to change, 0 to destroy`, confirming the refactor changed how the platform is configured without changing what is actually deployed.
+
+A new business case is added by:
+
+1. Creating `notebooks/config/<business_case>/` with that business case's schemas, accepted values, and validation rules.
+2. Creating `notebooks/business_cases/<business_case>/` with its own bronze-to-silver and downstream notebooks, importing from `notebooks.common` and its own `notebooks.config.<business_case>` package.
+3. Creating `terraform/environments/<business_case>.tfvars` with that business case's resource names and values.
+4. Creating `ml/<business_case>/` with its own feature engineering and model training, using `MLPaths(business_case="<business_case>")` for path construction.
+
+No changes to `notebooks/common/`, `terraform/main.tf`, `terraform/modules/`, or `ml/common/` are required to add a business case.
+
+---
+
 ## Azure Services
 
 | Service | Responsibility |
@@ -348,6 +376,10 @@ Sensitive values are not intended to be committed to source control.
 | Azure SQL Database | Relational database workload |
 | Azure Key Vault | Secrets-management foundation |
 | Azure Log Analytics | Centralized monitoring foundation |
+
+Deployed Azure resource names (resource group, Databricks workspace, SQL server, virtual network, and related resources) retain an earlier "cloud-dba" naming convention that predates the repository's rename to `azure-data-engineering-portfolio`. Renaming these in place would require destroying and recreating them, including the ADLS Gen2 data lake, so the existing names were intentionally preserved. New infrastructure provisioned for future business cases follows the current naming pattern going forward.
+
+`stclouddbaportfolio01` is the inbound landing-zone storage account that Azure Data Factory reads source files from before copying them into the ADLS Gen2 bronze layer (`stnenimadlsdev01`). It is plain Blob Storage rather than ADLS Gen2, since a flat landing zone does not need hierarchical-namespace features.
 
 ---
 
@@ -447,21 +479,28 @@ azure-data-engineering-portfolio/
 ├── notebooks/
 │   ├── common/
 │   │   ├── audit.py
-│   │   ├── contracts.py
 │   │   ├── metrics.py
 │   │   ├── paths.py
 │   │   └── validation.py
 │   │
-│   ├── northstar/
-│   │   ├── 01_bronze_to_silver_employees.py
-│   │   ├── 02_bronze_to_silver_dependents.ipynb
-│   │   ├── 03_bronze_to_silver_enrollments.ipynb
-│   │   ├── 04_bronze_to_silver_eligibility.ipynb
-│   │   ├── 05_silver_to_gold_employees.ipynb
-│   │   ├── 06_gold_eligibility_reconciliation.ipynb
-│   │   ├── 07_register_gold_tables.ipynb
-│   │   ├── 08_incremental_employee_merge.ipynb
-│   │   └── 09_northstar_pipeline_validation.ipynb
+│   ├── config/
+│   │   └── northstar/
+│   │       ├── schemas.py
+│   │       ├── valid_values.py
+│   │       ├── validation_rules.py
+│   │       └── paths.py
+│   │
+│   ├── business_cases/
+│   │   └── northstar/
+│   │       ├── 01_bronze_to_silver_employees.py
+│   │       ├── 02_bronze_to_silver_dependents.ipynb
+│   │       ├── 03_bronze_to_silver_enrollments.ipynb
+│   │       ├── 04_bronze_to_silver_eligibility.ipynb
+│   │       ├── 05_silver_to_gold_employees.ipynb
+│   │       ├── 06_gold_eligibility_reconciliation.ipynb
+│   │       ├── 07_register_gold_tables.ipynb
+│   │       ├── 08_incremental_employee_merge.ipynb
+│   │       └── 09_northstar_pipeline_validation.ipynb
 │   │
 │   └── archive/
 │       ├── 01_ADLS_Bronze_Silver_Gold_Pipeline.py
@@ -469,6 +508,9 @@ azure-data-engineering-portfolio/
 │       └── 03_SQL_Analytics_Gold_Data.sql
 │
 ├── ml/
+│   ├── common/
+│   │   └── paths.py
+│   │
 │   └── northstar/
 │       ├── README.md
 │       ├── 01_build_training_dataset.py
@@ -494,6 +536,8 @@ azure-data-engineering-portfolio/
 │   │   ├── networking/
 │   │   ├── resource-group/
 │   │   └── storage-account/
+│   ├── environments/
+│   │   └── northstar.tfvars
 │   ├── databricks-storage-access.tf
 │   ├── main.tf
 │   ├── outputs.tf
