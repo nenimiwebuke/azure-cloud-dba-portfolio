@@ -1,7 +1,7 @@
 business_case = "northstar"
 
 resource_group_name = "rg-cloud-dba-portfolio-dev"
-location             = "East US"
+location            = "East US"
 
 vnet_name      = "vnet-cloud-dba-dev"
 subnet_name    = "subnet-cloud-dba-dev"
@@ -20,8 +20,8 @@ sql_firewall_rule_name = "Allow-My-Current-IP"
 sql_firewall_ip        = "172.56.222.194"
 
 log_analytics_name = "law-cloud-dba-dev"
-key_vault_name      = "kv-nenim-cloud-dba-dev"
-data_factory_name   = "adf-nenim-cloud-dba-dev"
+key_vault_name     = "kv-nenim-cloud-dba-dev"
+data_factory_name  = "adf-nenim-cloud-dba-dev"
 
 data_lake_storage_account_name = "stnenimadlsdev01"
 data_lake_containers           = ["bronze", "silver", "gold"]
