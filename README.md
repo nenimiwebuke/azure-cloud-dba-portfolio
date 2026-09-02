@@ -416,7 +416,8 @@ Important platform decisions are documented explicitly through Architecture Deci
 docs/adr/
 ├── ADR-0001-platform-scope.md
 ├── ADR-0002-terraform-standard.md
-└── ADR-0003-environment-strategy.md
+├── ADR-0003-environment-strategy.md
+└── ADR-0004-postgres-region-eastus2.md
 ```
 
 Current ADRs document decisions concerning:
@@ -424,6 +425,7 @@ Current ADRs document decisions concerning:
 - Platform scope and workload boundaries
 - Terraform as the Infrastructure as Code standard
 - Environment strategy
+- PostgreSQL regional deployment (eastus2)
 
 This provides a record of not only **what** was implemented, but **why** architectural decisions were made.
 
@@ -709,6 +711,7 @@ The project now demonstrates not only how individual Azure services are deployed
 - Architecture documentation
 - Security design
 - Environment strategy
+- PostgreSQL regional deployment (eastus2)
 - Operational thinking
 - Version control
 
