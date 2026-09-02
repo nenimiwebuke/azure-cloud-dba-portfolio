@@ -122,3 +122,9 @@ variable "databricks_sku" {
   type    = string
   default = "trial"
 }
+variable "postgres_client_ip" {
+  type        = string
+  default     = ""
+  description = "Client IP allowed through the Postgres firewall, passed at apply time"
+}
+
