@@ -417,7 +417,8 @@ docs/adr/
 ├── ADR-0001-platform-scope.md
 ├── ADR-0002-terraform-standard.md
 ├── ADR-0003-environment-strategy.md
-└── ADR-0004-postgres-region-eastus2.md
+├── ADR-0004-postgres-region-eastus2.md
+└── ADR-0005-ha-unsupported-burstable-tier.md
 ```
 
 Current ADRs document decisions concerning:
@@ -426,6 +427,7 @@ Current ADRs document decisions concerning:
 - Terraform as the Infrastructure as Code standard
 - Environment strategy
 - PostgreSQL regional deployment (eastus2)
+- High availability limitation on Burstable tier
 
 This provides a record of not only **what** was implemented, but **why** architectural decisions were made.
 
@@ -712,6 +714,7 @@ The project now demonstrates not only how individual Azure services are deployed
 - Security design
 - Environment strategy
 - PostgreSQL regional deployment (eastus2)
+- High availability limitation on Burstable tier
 - Operational thinking
 - Version control
 
