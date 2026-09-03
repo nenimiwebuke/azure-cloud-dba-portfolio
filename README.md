@@ -433,6 +433,26 @@ This provides a record of not only **what** was implemented, but **why** archite
 
 ---
 
+## Disaster Recovery Testing
+
+High availability (zone-redundant failover) was evaluated for the Northstar PostgreSQL server and found unsupported on the Burstable tier - see ADR-0005 for the full investigation, including a failed live attempt that surfaced a discrepancy between Azure's SKU capability metadata and its actual provisioning behavior.
+
+Point-in-Time Recovery (PITR) was tested as the working disaster-recovery mechanism for this project instead:
+
+    1. Captured a baseline row count and timestamp on the dependents table
+    2. Deliberately deleted a row to simulate accidental data loss
+    3. Restored the server to a point in time before the deletion, using
+       az postgres flexible-server restore, which provisions a new,
+       separate server from the backup chain
+    4. Connected to the restored server and confirmed the deleted row was
+       present again, proving the recovery point was accurate
+    5. Deleted the temporary restored server, leaving the original server
+       untouched throughout the entire test
+
+This confirms a working, verified recovery path for accidental data loss, independent of the HA limitation noted in ADR-0005.
+
+---
+
 ## Architecture Documentation
 
 Detailed platform documentation is maintained alongside the implementation:
